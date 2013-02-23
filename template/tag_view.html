@@ -5,7 +5,7 @@
 { % load taggit_extras %}
 { % get_tagcloud as tags2 for 'gigapan.Gigapan' %}
 { % for tag in tags2 %}
-	<font size={{tag.weight|floatformat:0}}><a href="/gigapans/bytag/{{tag}}">{{tag}}</a></font>
+    <font size={{tag.weight|floatformat:0}}><a href="/gigapans/bytag/{{tag}}">{{tag}}</a></font>
 { % endfor %}
 -->
 <h2>&nbsp;<br>Tag Cloud&nbsp;<br>&nbsp;</h2>
@@ -13,32 +13,32 @@ multiple tags: like 'monochrom and vienna'
 
 {% if tag_dict %}
 using tag_dict
-	{% for tag in tag_dict %}
-		{% if tag.font_size > 6 %}
+    {% for tag in tag_dict %}
+        {% if tag.font_size > 6 %}
             <a class="tag_cloud" href="/gigapans/bytag/{{ tag.name }}" style="font-size:{{tag.font_size|floatformat:0}}px">{{ tag.name }}</a>&nbsp;
-		{% endif %}
-	{% endfor %}
+        {% endif %}
+    {% endfor %}
 
 {% endif %}
 
 {% if tags %}
 using 'tags'
-	{% for tag in tags %}
-		{% if tag.font_size > 6 %}
-			<a href="/gigapans/bytag/{{ tag.name }}" style="font-size:{{tag.font_size|floatformat:0}}px">{{ tag.name }}</a>&nbsp;
-		{% endif %}
-	{% endfor %}
+    {% for tag in tags %}
+        {% if tag.font_size > 6 %}
+            <a href="/gigapans/bytag/{{ tag.name }}" style="font-size:{{tag.font_size|floatformat:0}}px">{{ tag.name }}</a>&nbsp;
+        {% endif %}
+    {% endfor %}
 
 <!--
     <ol class="niceList">
-		{% for tag in tags %}
-			<li><a href="/gigapans/bytag/{{ tag.name }}">{{ tag.name }}</a> ({{ tag.num_times }} cnt)
-			{% if  tag.latitude %}
-				({{ tag.latitude }}, {{ tag.longitude }})
-			{% else %}
-				No georeference 
-			{% endif %}
-			</li>
+        {% for tag in tags %}
+            <li><a href="/gigapans/bytag/{{ tag.name }}">{{ tag.name }}</a> ({{ tag.num_times }} cnt)
+            {% if  tag.latitude %}
+                ({{ tag.latitude }}, {{ tag.longitude }})
+            {% else %}
+                No georeference 
+            {% endif %}
+            </li>
         {% endfor %}
     </ol>
 -->    

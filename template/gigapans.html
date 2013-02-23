@@ -2,89 +2,89 @@ look at tumblr /archive for a nice format.
 tag_list {{ tag_list }}<br>
 {% if p %}
   Showing images tagged: <b>{{ p }}</b> 
-  	{% if foobar %}
-		<form  action="/gigapan/" method="post"> <!--{ % csrf_token % } -->
-		<label for="id_oldtag">Existing Tag:</label>
-		<input id="id_oldtag" type="text" name="oldtag" maxlength="100" value="{{ p }}"/>
-		<label for="id_latitude">Existing Latitude:</label>
-		<input id="id_latitude" type="text" name="latitude" maxlength="100"/>
-		<label for="id_newtag">NewTag:</label>
-		<input id="id_newoldtag" type="text" name="newtag" maxlength="100"/>
-	{% endif %}
+      {% if foobar %}
+        <form  action="/gigapan/" method="post"> <!--{ % csrf_token % } -->
+        <label for="id_oldtag">Existing Tag:</label>
+        <input id="id_oldtag" type="text" name="oldtag" maxlength="100" value="{{ p }}"/>
+        <label for="id_latitude">Existing Latitude:</label>
+        <input id="id_latitude" type="text" name="latitude" maxlength="100"/>
+        <label for="id_newtag">NewTag:</label>
+        <input id="id_newoldtag" type="text" name="newtag" maxlength="100"/>
+    {% endif %}
 <p>
   {{ form.as_p }}
   {% for field in form %}
-	<!--
-	  <div class="fieldWrapper">
-		  {{ field.errors }}
-		  {{ field.label_tag }}: {{ field }}
-	  </div>
-	-->  
+    <!--
+      <div class="fieldWrapper">
+          {{ field.errors }}
+          {{ field.label_tag }}: {{ field }}
+      </div>
+    -->  
   {% endfor %}
   <p>
   <input type="submit" value="Add Tag" /></p>
 {% endif %}
 
 {% if gigapans %}
-	<div class="nav_local">
-		{{header}} {{ nav.start }} to {{ nav.end }} of {{ nav.gigapan_cnt }} 
-		<a href="/gigapans/{{ nav.prev }}">Perv</a> | (page {{ nav.page }}/{{ nav.page_cnt}} ) | <a href="{{ nav.next_link }}">Next</a><br>
-		download kml
-	
-	</div>
-	
-	<div class="gigapans">
-	error: issues showing the first gigapan? wtf, and nav is ignoring if this is a user filter...
-		<hr>
-		{% for g in gigapans %}
-				<a href="/gigapan/{{ g.id }}"  class="Xhoverbaby" >
-				   <!-- <img src="/static/img/{{ g.thumbnail_filename}}" height="150" width="150"> -->
-				   <img src="/static/img/{{ g.gigapan_id }}.jpg" height="15%" width="15%">
+    <div class="nav_local">
+        {{header}} {{ nav.start }} to {{ nav.end }} of {{ nav.gigapan_cnt }} 
+        <a href="/gigapans/{{ nav.prev }}">Perv</a> | (page {{ nav.page }}/{{ nav.page_cnt}} ) | <a href="{{ nav.next_link }}">Next</a><br>
+        download kml
+    
+    </div>
+    
+    <div class="gigapans">
+    error: issues showing the first gigapan? wtf, and nav is ignoring if this is a user filter...
+        <hr>
+        {% for g in gigapans %}
+                <a href="/gigapan/{{ g.id }}"  class="Xhoverbaby" >
+                   <!-- <img src="/img/{{ g.thumbnail_filename}}" height="150" width="150"> -->
+                   <img src="/img/{{ g.gigapan_id }}.jpg" height="15%" width="15%">
 
-					<!-- 
-					   <img src="/static/img/{{ g.gigapan_id }}.jpg" height="30%" width="30%">
+                    <!-- 
+                       <img src="/img/{{ g.gigapan_id }}.jpg" height="30%" width="30%">
 
-					   <img src="/static/img/{{ g.thumbnail_filename}}" height="250" width="250">
-					-->
-					 <!-- <p>{{g.name}}{{g.updated}}</p> -->
-				</a>
-			{% if edit %}
-				<br>Edit<br>
-				<form action="/gigapan/index/" method="post">{% csrf_token %}
-				{{ form.as_p }}
-				<input type="submit" value="Submit" />
-				</form>
-			{% endif %}
-		{% endfor %}
-	</div>
-	<div class="nav_local">
-		{{header}} {{ nav.start }} to {{ nav.end }} of {{ nav.gigapan_cnt }} 
-		<a href="/gigapans/{{ nav.prev }}">Perv</a> | (page {{ nav.page }}/{{ nav.page_cnt}} ) | <a href="/gigapans/{{ nav.next }}">Next</a>
-	</div>
+                       <img src="/img/{{ g.thumbnail_filename}}" height="250" width="250">
+                    -->
+                     <!-- <p>{{g.name}}{{g.updated}}</p> -->
+                </a>
+            {% if edit %}
+                <br>Edit<br>
+                <form action="/gigapan/index/" method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit" />
+                </form>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="nav_local">
+        {{header}} {{ nav.start }} to {{ nav.end }} of {{ nav.gigapan_cnt }} 
+        <a href="/gigapans/{{ nav.prev }}">Perv</a> | (page {{ nav.page }}/{{ nav.page_cnt}} ) | <a href="/gigapans/{{ nav.next }}">Next</a>
+    </div>
 {% else %}
     <p>No gigapans meet filters, or none exist. .</p>
 {% endif %}
 
 
 <div class="text_list">
-	<hr>
-	Text listing 
-	{% if gigapans %}
-		<ol class="niceList">
-		{% for g in gigapans %}
-			<li><a href="/gigapan/{{ g.id }}">
-			   {{ g.name }}
-				<!-- <img src="img/.jpg" width="800" height=""><br>
-				(View {{ g.gigapixels }} gigapixel image on GigaPan.org) -->
-				</a>
-			</li>
-				<!-- { { g.description }} -->
-		{% endfor %}
-		</ol>
-		<p>
-		Gigapan world! 
-	{% else %}
-		<p>No gigapans meet filters, or none exist. .</p>
-	{% endif %}
+    <hr>
+    Text listing 
+    {% if gigapans %}
+        <ol class="niceList">
+        {% for g in gigapans %}
+            <li><a href="/gigapan/{{ g.id }}">
+               {{ g.name }}
+                <!-- <img src="img/.jpg" width="800" height=""><br>
+                (View {{ g.gigapixels }} gigapixel image on GigaPan.org) -->
+                </a>
+            </li>
+                <!-- { { g.description }} -->
+        {% endfor %}
+        </ol>
+        <p>
+        Gigapan world! 
+    {% else %}
+        <p>No gigapans meet filters, or none exist. .</p>
+    {% endif %}
 </div>
 

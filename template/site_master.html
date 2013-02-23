@@ -1,47 +1,47 @@
 <!DOCTYPE html >
 <html>
-	<head>
-		<title>Scale Independent</title>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="/static/css/stylez.css" />
+    <head>
+        <title>Scale Independent</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="/css/stylez.css" />
 </head>
 <body>
-	<header class="top_header">
-		<a href="/">HOME</a>&nbsp;|
-		<a href="/portfolio.html">Portfolios</a>&nbsp;|&nbsp;
-		<a href="/projects">Projects</a>&nbsp;|
-		<a href="./about.html">About Rich & Contact</a>&nbsp;|
-		<a href="resume/resume.html">CV</a>	&nbsp;
-		<br>
-		<a href="/gigapans/">Show gigapans</a>&nbsp;|&nbsp;
-		<a href="/gigapans/tag_view">old Tag View</a>&nbsp;|&nbsp;
-		<a href="/gigapans/tags">Tags</a>&nbsp;|&nbsp;
+    <header class="top_header">
+        <a href="/">HOME</a>&nbsp;|
+        <a href="/portfolio.html">Portfolios</a>&nbsp;|&nbsp;
+        <a href="/projects">Projects</a>&nbsp;|
+        <a href="./about.html">About Rich & Contact</a>&nbsp;|
+        <a href="resume/resume.html">CV</a>    &nbsp;
+        <br>
+        <a href="/gigapans/">Show gigapans</a>&nbsp;|&nbsp;
+        <a href="/gigapans/tag_view">old Tag View</a>&nbsp;|&nbsp;
+        <a href="/gigapans/tags">Tags</a>&nbsp;|&nbsp;
 
-		<a href="/gigapans/calendar">Calendar </a> &nbsp;|&nbsp;
-		<a href="/gigapans/map">Geo stuff </a> &nbsp;|&nbsp;
-		<a href="/gigapans/mapkml">KML Map </a>&nbsp;|&nbsp;
-		<a href="/gigapans/stats">Statistics</a>&nbsp;|&nbsp;
-		<a href="/gigapans/galleries">Galleries</a>&nbsp;|&nbsp;
-		<a href="/gigapans/gfat">GFAT</a>&nbsp;|&nbsp;
-		<a href="/users">Users</a>&nbsp;|&nbsp;
-		<a href="/admin">Admin</a>&nbsp;|&nbsp;
-		<a href="/docs">Docs</a>&nbsp;|&nbsp;
-	</header>
-	<div class="container cf">		
-		<section class="sidebar">
-			{% if sidebar_template %}
-				{% include sidebar_template %}	
-			{% else %}
-				{% include 'default_sidebar.html' %}			
-			{% endif %}
-		</section><!-- sidebar -->		
-		<div class="main_content">
-			{% if pre %}
-				<pre>{% include page_template %}</pre>
-			{% else %}
-				{% include page_template %}
-			{% endif %}
-		</div><!-- main_content -->
-	</div><!-- container -->	
+        <a href="/gigapans/calendar">Calendar </a> &nbsp;|&nbsp;
+        <a href="/gigapans/map">Geo stuff </a> &nbsp;|&nbsp;
+        <a href="/gigapans/mapkml">KML Map </a>&nbsp;|&nbsp;
+        <a href="/gigapans/stats">Statistics</a>&nbsp;|&nbsp;
+        <a href="/gigapans/galleries">Galleries</a>&nbsp;|&nbsp;
+        <a href="/gigapans/gfat">GFAT</a>&nbsp;|&nbsp;
+        <a href="/users">Users</a>&nbsp;|&nbsp;
+        <a href="/admin">Admin</a>&nbsp;|&nbsp;
+        <a href="/docs">Docs</a>&nbsp;|&nbsp;
+    </header>
+    <div class="container cf">        
+        <section class="sidebar">
+            {% if sidebar_template %}
+                {% include sidebar_template %}    
+            {% else %}
+                {% include 'default_sidebar.html' %}            
+            {% endif %}
+        </section><!-- sidebar -->        
+        <div class="main_content">
+            {% if pre %}
+                <pre>{% include page_template %}</pre>
+            {% else %}
+                {% include page_template %}
+            {% endif %}
+        </div><!-- main_content -->
+    </div><!-- container -->    
 </body>
 </html>
