@@ -1,0 +1,50 @@
+<h2>My site API/Naming conventions</h2>
+
+/user/<user_id>/gigapans
+/user/<user_id>/gigapans.kml
+/user/<user_id>/calendar
+/user/<user_id>/tags
+/user/<user_id>/charts
+
+
+<h2>Notes on GigaPan API</h2>
+
+<p>There is the new API, and the legacy API. The docs were, as far as I can tell, only
+on the old GigaPan forums, which are currently unavailable. Here is an attempt to 
+recreate/reverse some of the API methods.</p>
+
+<ul>
+<li>http://api.gigapan.org/beta/gigapans/page/%i/per_page/%i/username/%s/most_recent.json
+<li>http://api.gigapan.org/beta/gigapans/page/1/per_page/100/username/cfastie/most_recent.json
+<li>seadragon gigapan tile source http://www.gigapan.com/mobile/iOS/1.0/js/org/gigapan/seadragon/GigapanTileSource.js
+
+<li>thumbnail api http://api.gigapan.org/beta/gigapans/104010-2000x500.jpg
+
+<li>Mobile viewer http://www.gigapan.com/mobile/iOS/1.0/?id=117368
+<li>new forum post with notes http://gigapan.com/forums/14/topics/223
+</ul>
+
+"For instance, for your image, the new api address would be http://www.gigapan.com/gigapans/104010.json"
+<p>
+.json means 'the new api' I assume, but not everything supports that :-( but try putting .json on 
+links on the gigapan site.
+
+<p>
+The old api:<br>
+http://api.gigapan.org/beta/gigapans/104010.json.  
+<br>
+<pre>
+BASE_URL = 'http://api.gigapan.org/beta'
+ORDER_MAP = { 'name': 'by_name',
+              'popular': 'most_popular',
+              'recent': 'most_recent',
+              'size': 'by_size' }
+
+  url = BASE_URL + '/gigapans'
+    url += '/page/' + str(page)
+
+    url += '/tag/' + options.tag
+    url += '/matching/' + options.match
+
+  url += '/' + ORDER_MAP[options.order] + '.json'
+</pre>

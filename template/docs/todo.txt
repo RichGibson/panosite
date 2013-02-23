@@ -1,0 +1,19 @@
+Things to do or think about...
+
+
+-create some 'overall' histogram view.
+
+
+-pagination: views bytag() needs pagination...refactor into main gigapans() with a tag parameter?
+
+-user/gigapan pagination not working.
+
+Log
+
+-2012-10-26 /user/ pages, user filters, user mode exists
+-2012-10-21 pagination of gigapans view 
+-2012-10-20 Added 'CMS' like capability to 'docs'
+
+
+
+-

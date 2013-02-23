@@ -1,0 +1,87 @@
+#!/usr/bin/python
+
+#tile_foo.py - do something with gigapan tiles
+
+# first...print urls to tiles at a certain zoom level
+
+# get info at this url http://api.gigapan.org/beta/gigapans/116843.json
+#
+gigapan_id = 116843
+width=9578.0
+height = 9535.0
+levels = 7
+
+
+
+# this doesn't work...the x and bit 'bit' does not return the right piece of the quadtree
+# I don't really understand any of it. suck me.
+
+def getTileUrl(id, level, x, y):
+    """Return the url for the tile which contains the point (x,y) at zoom level 'level'"""
+    url = 'http://share.gigapan.org/gigapans0/%i/tiles' % gigapan_id
+    url = 'http://tile%i.gigapan.org/gigapans0/%i/tiles' % (int(gigapan_id/1000), gigapan_id)
+    GC_TILE = ["0", "1", "2", "3"];
+    name = "r";
+    bit = 1 << level >> 1;
+    print "before while, bit: %i" % bit
+    print "level: %i" %level
+    print range(level)
+    for foo in range(level):
+        print "foo: %i" % foo
+        if ( (x & bit) > 0) :
+            x_index	= 1
+        else:
+            x_index	= 0
+        if ( (y & bit) > 0) :
+            y_index	= 2
+        else:
+            y_index	= 0
+        name = name + GC_TILE[( x_index + y_index )];
+        #name = name + GC_TILE[( (x and bit) and 1 or 0) + ( (y and bit) and 2 or 0)];
+
+        print "x and bit ", ((x and bit) and 1 or 0)
+        print "y and bit ", ((y and bit) and 2 or 0)
+        print "GC Tile index thing: ", GC_TILE[( (x and bit) and 1 or 0) + ( (y and bit) and 2 or 0)]
+
+        print "x: %i y:%i bit: %i name: %s" % (x,y,bit,name)
+        bit = bit >> 1;
+        print "end, bit: %i" % bit 
+
+    print "after for loop?"
+    i = 0;
+    print "now add paths to name: %s" % name
+    print "len(name): %i" % (len(name))
+    while (i <= len(name) - 3):
+        url = url + ("/" + name[i:i+3]);
+        print "i: %i url in loop:%s" % (i,url)
+        i = i + 3;
+        print "i at end: %i" % i
+
+    return ("%s/%s.jpg" % (url, name))
+
+print "result of getTileUrl: %s" % getTileUrl(116843,7,9433,1)
+	
+"""	
+	while (bit > 0):
+	 {
+	 name = name + GC_TILE[(x & bit ? (1) : (0)) + (y & bit ? (2) : (0))];
+	 bit = bit >> 1;
+	 }
+	var i = 0;
+	while (i < name.length - 3)
+	 {
+	 url = url + ("/" + name.substr(i, 3));
+	 i = i + 3;
+	 }
+	if (gigapan[name] == null & gigapan[name] !== null) {
+	 //alert('no translation');
+	 return (url + "/" + name + '.jpg');
+	}else{
+	 //alert("gigapan['id']"+gigapan['id']+" gigapan["+name+"]:"+gigapan[name]);
+	 return ("http://farm4.static.flickr.com/" + gigapan[name] + ".jpg");
+	 
+	}
+	};
+	
+"""
+

@@ -1,0 +1,41 @@
+<!-- /Users/rich/wa/django/mysite/template/gigapan/index.html -->
+<!-- array/dict gigapans exists -->
+
+Map View
+
+Get a location for each gigapan where possible...
+{% if p %}
+  filtered: {{ p }}
+{% endif %}
+
+<hr>
+Gigapans with location
+{% if gigapans %}
+    <ol>
+    {% for g in gigapans %}
+        {% if g.latitude != None %}
+            <li><a href="/gigapan/{{ g.id }}/">
+               {{ g.name }}
+               ({{ g.latitude }},{{ g.longitude }}) <!-- error circle: {{ g.radius }} -->
+            </a>
+        {% endif %}
+    {% endfor %}
+    </ol>
+{% else %}
+    <p>No gigapans meet filters, or none exist. .</p>
+{% endif %}
+<hr>
+Gigapans with No location
+{% if gigapans %}
+    <ol>
+    {% for g in gigapans %}
+        {% if g.latitude == None %}
+            <li><a href="/gigapan/{{ g.id }}/">
+               {{g.gigapan_id}} -  {{ g.name }}
+            </a>
+        {% endif %}
+    {% endfor %}
+    </ol>
+{% else %}
+    <p>No gigapans meet filters, or none exist. .</p>
+{% endif %}

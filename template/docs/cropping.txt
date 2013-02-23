@@ -1,0 +1,12 @@
+how to crop images...
+
+look at tools/crop_work.py
+
+need to get PIL installed, and having trouble :-/
+
+Cropping work
+import Image
+im = Image.open('sample.jpg')
+
+http://www.pythonware.com/library/pil/handbook/image.htm
+getdata or getpixel depending...

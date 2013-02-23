@@ -1,0 +1,15 @@
+<!-- /Users/rich/wa/django/mysite/template/gigapan/gigapan.html -->
+<!-- temporary view of a 'thumbnail' while I develop thumbnail caching -->
+
+<a href="/gigapans/">Gigapans</a><br>
+{% if filename %}
+    {{ filename }}
+    {{ url }}
+    <img src="{{ url }}">
+
+{% else %}
+    <p>No gigapan found meet filters, or none exist. .</p>
+{% endif %}
+
+
+

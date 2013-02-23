@@ -1,0 +1,876 @@
+<!DOCTYPE html> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"
+ >
+<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<!-- Rendered: Tue Oct 23 13:19:56 -0400 2012 -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>GigaPan</title>
+
+
+
+<link href="/stylesheets/main.css?1347989739" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/print.css?1347989739" media="print" rel="stylesheet" type="text/css" />
+<!--[if IE 8]><link href="/stylesheets/ie8.css?1347989739" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lte IE 7]><link href="/stylesheets/ie.css?1347989739" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lte IE 6]><link href="/stylesheets/ie6.css?1347989739" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<script src="/javascripts/jquery-1.7.1.min.js?1347989739" type="text/javascript"></script>
+
+<script src="/javascripts/jrails.js?1347989739" type="text/javascript"></script>
+<script type="text/javascript"> var $j  =   jQuery.noConflict();</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+function ajax_form_request() {
+$j('.windows #forms').append('<div id=\"tech-support\" class=\"window\">\n<div class=\"window_inner\">\n<iframe width=\"100%\" height=\"550\" frameborder=\"0\" scrolling=\"no\" src=\"https://forms.netsuite.com/app/site/crm/externalcasepage.nl?compid=926193&formid=17&h=cdd874d01e3e2a41e557\"><\/iframe>\n<\/div>\n<\/div>\n\n<div id=\"customer-service\" class=\"window cust-support\">\n<div class=\"window_inner\">\n<iframe width=\"100%\" height=\"420\" frameborder=\"0\" scrolling=\"no\" src=\"https://forms.netsuite.com/app/site/crm/externalcasepage.nl?compid=926193&formid=21&h=78ed1a61faae663e42e0  \"><\/iframe>\n<\/div>\n<\/div>  \n\n<div id=\"other-inquiries\" class=\"window inquiries\">\n<div class=\"window_inner\">\n<iframe width=\"100%\" height=\"480\" frameborder=\"0\" scrolling=\"no\" src=\"https://forms.netsuite.com/app/site/crm/externalcasepage.nl?compid=926193&formid=19&h=bab2165ebab37e8020f6\"><\/iframe>\n<\/div>\n<\/div> \n\n<div id=\"education-research\" class=\"window education\">\n<div class=\"window_inner\">\n<iframe width=\"100%\" height=\"550\" frameborder=\"0\" scrolling=\"no\" src=\"https://forms.netsuite.com/app/site/crm/externalcasepage.nl?compid=926193&formid=24&h=85bc47101a366ede342a\"><\/iframe>\n<\/div>\n<\/div>\n\n<div id=\"registration-downloads\" class=\"window registration\">\n<div class=\"window_inner\">\n<iframe width=\"100%\" height=\"550\" frameborder=\"0\" scrolling=\"no\" src=\"https://system.netsuite.com/core/media/media.nl?id=1142&c=926193&h=c1c24bdb22f948e9aeda&_xt=.html\"><\/iframe>\n\n<\/div>\n<\/div>');
+}
+
+//]]>
+</script>
+
+<link href="/stylesheets/ui-custom.css?1347989739" media="screen" rel="stylesheet" type="text/css" />
+<script src="/javascripts/jquery-ui-1.8.21.custom.min.js?1347989739" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$j(function(){
+	$j('select.filter-dropdown').selectmenu({
+		icons: {
+			primary: "ui-icon-locked"
+		},
+		menuWidth: 130,
+		width: 130,
+		maxHeight: 400,
+		style: 'dropdown'
+	});
+});
+
+//]]>
+</script>
+<!-- cms head -->
+
+<!-- /cms head -->
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4157572-2']);
+  _gaq.push(['_setDomainName', 'gigapan.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body class="home">
+<div class="container">
+
+<!-- Accessibility: skip repetitive navigation -->
+  <ol id="accessibility-nav">
+      <li><a href="#navigation">Skip to navigation</a></li>
+      <li><a href="#content">Skip to content</a></li>
+      <li><a href="#sidebar">Skip to sidebar</a></li>
+  </ol>
+<!-- / accessibility-nav -->
+<hr />
+
+<div id="header">
+	<a href="/" class="site-name" title="Go to homepage" rel="home"><span></span></a>
+	<div id="top-nav">
+		<ul id="header-list">
+			<li class="with-flyout first">
+				<a href="/cms/community-overview" class="top-level" id="menuCommunity">Community</a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/groups/landing_page" id="menuCommunityGroups">Groups</a>
+						</li>
+						<li>
+							<a href="/users" id="menuCommunityMembers">Members</a>
+						</li>
+						<li>
+							<a href="/forums" id="menuCommunityForum">Forum</a>
+						</li>
+						<li>
+							<a href="/cms/about/media" id="menuCommunityNews">News &amp; Updates</a>
+						</li>
+						<li>
+							<a href="/cms/community/gigalounge" id="menuCommunityGigaLounge">GigaLounge</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			<li class="with-flyout">
+				<a href="/cms/shop/store" class="top-level" id="menuStore">Store</a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/cms/shop/epic-pro" id="menuStoreEpicPro">EPIC Pro</a>
+						</li>
+						<li>
+							<a href="/cms/shop/epic-100" id="menuStoreEpic100">EPIC 100</a>
+						</li>
+						<li>
+							<a href="/cms/shop/epic" id="menuStoreEpic">EPIC</a>
+						</li>
+						<li>
+							<a href="/cms/shop/parts" id="menuStoreAccessories">Accessories</a>
+						</li>
+						<li>
+							<a href="/cms/shop/software" id="menuStoreStitch">Software</a>
+						</li>
+						<li>
+							<a href="/cms/shop/gigapan-accessories" id="menuStoreGear">GigaPan Gear</a>
+						</li>
+						<li>
+							<a href="/gigatag" id="menuStoreGigaTag">GigaTag</a>
+						</li>
+						<li>
+							<a href="/cms/shop/reviews" id="menuStoreReviews">Product Reviews</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			<li class="with-flyout">
+				<a href="/cms/support-overview" class="top-level" id="menuSupport">Support</a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/cms/manuals" id="menuSupportManuals">Manuals</a>
+						</li>
+						<li>
+							<a href="/cms/support/tech-specs" id="menuSupportTechSpecs">Tech Specs</a>
+						</li>
+						<li>
+							<a href="/cms/support/camera-compatibility" id="menuSupportCompatibleCameras">Compatible Cameras</a>
+						</li>
+						<li>
+							<a href="/cms/frequently-asked-questions" id="menuSupportFAQs">FAQs</a>
+						</li>
+						<li>
+							<a href="/cms/videos" id="menuSupportVideoTutorials">Video Tutorials</a>
+						</li>
+						<li>
+							<a href="/forums" id="menuSupportForum">Forum</a>
+						</li>
+						<li>
+							<a href="/cms/support/contact-support" id="menuSupportContact">Contact Support</a>
+						</li>
+						<li>
+							<a href="/cms/downloads" id="menuSupportDownload">Downloads</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			
+			<li class="with-flyout">
+				<a href="/cms/about-us" class="top-level" id="menuAboutUs">About Us</a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/cms/about/press-releases" id="menuAboutUsPress">Press &amp; Media</a>
+						</li>
+						<li>
+							<a href="/cms/about/usage" id="menuAboutUsPolicies">Our Policies</a>
+						</li>
+						<li>
+							<a href="/cms/about-us" id="menuAboutUsAbout">About GigaPan</a>
+						</li>
+						<li><a href="/cms/about/careers" id="menuAboutUsCareers">Careers</a></li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			<li id="messageNotice">
+				
+			</li>
+		</ul>
+		<!-- / #header-list -->
+	</div>
+	<!-- / top-nav -->
+	<form action="/welcome/main_search" id="main-search-form" method="get">
+
+<div id="filter-search" class="filter">
+<fieldset>
+
+<div class="search-form">
+<fieldset>
+<input class="search-txt" id="header-search" name="query" placeholder="Search" type="text" value="" />
+</fieldset>
+</div>
+</fieldset>
+<fieldset>
+   <select class="custom-select" id="header-search-show" include_blank="true" name="show"><option value="gigapans" selected="selected">GigaPans</option>
+<option value="galleries">Galleries</option>
+<option value="groups">Groups</option></select>
+</fieldset>
+<fieldset>
+<input type="submit" name="submit" id='header-search-submit' class="go-submit magnifyingGlassButton" value="Search" />
+</fieldset>
+</div>
+
+</form>
+
+
+	<div id="navigation">
+		<ul class="topmenu">
+			<li class="with-flyout toproot first">
+				<a href="/cms/view" class="view-link" id="menuView"><span>View</span></a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li class="topmenu_subheading">
+							<a href="/gigapans" id="menuViewGigaPans">GigaPans</a>
+						</li>
+						<li class="topmenu_subitem">
+							<a href="/gigapans?order=most_recent" id="menuViewGigaPansMostRecent">Most Recent</a>
+						</li>
+						<li class="topmenu_subitem">
+							<a href="/gigapans?order=most_popular" id="menuViewGigaPansMostPopular">Most Popular</a>
+						</li>
+						<li class="topmenu_subheading">
+							<a href="/galleries/landing_page" id="menuViewGalleries">Galleries</a>
+						</li>
+						<li class="topmenu_subitem">
+							<a href="/galleries?order=most_recent" id="menuViewGalleriesMostRecent">Most Recent</a>
+						</li>
+						<li class="topmenu_subitem">
+							<a href="/galleries?order=most_popular" id="menuViewGalleriesMostPopular">Most Popular</a>
+						</li>
+						<li>
+							<a href="/competitions/landing_page" id="menuViewCompetitions">Competitions</a>
+						</li>
+						<li>
+							<a href="/snapshots" id="menuViewSnapshots">Snapshots</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			<li class="with-flyout toproot first">
+				<a href="/cms/create" class="create-link" id="menuCreate"><span>Create</span></a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/cms/create-make" id="menuCreateMakeGigaPans">Make GigaPans</a>
+						</li>
+						<li>
+							<a href="/cms/create-embed" id="menuCreateEmbed">Embed</a>
+						</li>
+						<li>
+							<a href="/cms/create-games" id="menuCreateGames">Games</a>
+						</li>
+						<li>
+							<a href="/cms/create-advanced-techniques" id="menuCreateTechnique">Techniques</a>
+						</li>
+						<li>
+							<a href="/cms/create-upload" id="menuCreateUpload">Upload</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+			<li class="with-flyout toproot">
+				<a href="/cms/use" class="use-link" id="menuUse"><span>Use</span></a>
+				<div class="flyout">
+					<div class="top"></div>
+					<ul>
+						<li>
+							<a href="/cms/use-share" id="menuUseShare">Share</a>
+						</li>
+						<li>
+							<a href="/cms/use-learn" id="menuUseLearn">Learn</a>
+						</li>
+						<li>
+							<a href="/cms/use-promote" id="menuUsePromote">Promote</a>
+						</li>
+						<li>
+							<a href="/cms/use-engage" id="menuUseEngage">Engage</a>
+						</li>
+						<li>
+							<a href="/cms/use-gigatag" id="menuUseGigaTag">GigaTag</a>
+						</li>
+					</ul>
+					<div class="bottom"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- / navigation -->
+</div>
+<!-- / header -->
+
+<hr />
+ 
+
+<div id="top">
+<div class="wrapper">
+ <!-- Galleries -->
+<div class="left-side">
+	<h1>Galleries</h1>
+</div>
+
+</div>
+</div>
+
+
+
+<div id="flash-box"></div>
+
+
+
+ <!-- User Home -->
+
+
+<div class="wrapper">
+	<div id="middle">
+		<div class="left-side">
+			
+		</div>
+		<div class="right-side">
+  <form action="/galleries" class="filter" method="get">
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      <fieldset>
+        <label for="categories" style="display:none;">categories</label>
+        <select class="filter-dropdown" id="categories" name="categories"><option value="">Category...</option>
+<option value="architectural">architectural</option>
+<option value="astrophotography">astrophotography</option>
+<option value="banquet">banquet</option>
+<option value="cityscapes">cityscapes</option>
+<option value="environmental">environmental</option>
+<option value="experimental">experimental</option>
+<option value="fashion">fashion</option>
+<option value="fine art">fine art</option>
+<option value="forensic">forensic</option>
+<option value="geology">geology</option>
+<option value="indoor">indoor</option>
+<option value="landscape">landscape</option>
+<option value="long exposure">long exposure</option>
+<option value="macro">macro</option>
+<option value="nature">nature</option>
+<option value="night">night</option>
+<option value="photojournalism">photojournalism</option>
+<option value="portrait">portrait</option>
+<option value="social">social</option>
+<option value="sports">sports</option>
+<option value="still life">still life</option>
+<option value="street">street</option>
+<option value="travel">travel</option>
+<option value="underwater">underwater</option>
+<option value="virtual reality">virtual reality</option>
+<option value="war">war</option>
+<option value="wedding">wedding</option></select>
+      </fieldset>
+      <fieldset>
+      <label for="order" style="display:none;">order</label>
+      <select class="filter-dropdown" id="order" name="order"><option value="">Sort by...</option>
+<option value="most_recent">Most Recent</option>
+<option value="most_popular">Most Popular</option>
+<option value="by_size">Largest</option></select>
+
+      </fieldset>
+      <fieldset>
+      <label for="since" style="display:none;">since</label>
+      <select class="filter-dropdown" id="since" name="since"><option value="">Uploaded since...</option>
+<option value="" selected="selected">All time</option>
+<option value="1">24 hours ago</option>
+<option value="5">5 days ago</option>
+<option value="10">10 days ago</option>
+<option value="30">One month ago</option></select>
+
+      </fieldset>
+
+      <fieldset>
+      <div class="search-form">
+          <fieldset>
+           <input id="localquery" name="query" class="search-txt hint" value="" type="text" placeholder="keyword" />
+
+          </fieldset>
+          <fieldset>
+       
+              <input type="submit" name="submit" class="filter-button rounded-corners" value="Go" />
+          </fieldset>
+      </div>
+      </fieldset>
+  </form>
+</div>
+  
+
+
+
+	</div>
+</div>
+<!-- / Galleries -->
+
+ 
+
+<div id="inner">
+	
+			
+			<br />
+			<div id="index-results" class="wrapper">
+				<div class='pager'>Go to page: <div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <span class="gap">&hellip;</span> <a href="/galleries?page=107">107</a> <a href="/galleries?page=2" class="next_page" rel="next">Next &raquo;</a></div></div>
+			</div> <!-- / index-results -->
+			    <h1>
+        <a href="/galleries/6967/gigapans">Capture the Crowd</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6967/gigapans" class="media"><img alt="B97700716feb68ce9502641a0d83cf1c" height="100" src="/images0/b9/77/b97700716feb68ce9502641a0d83cf1c.jpg?1323470285" width="100" /></a>
+    <p class="views">8 GigaPans<span>Views</span></p>
+<p>Capturing the crowd with GigaPan</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>1.79422 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>4068</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=social">social</a>, <a href="/galleries?categories=sports">sports</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6967">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6968/gigapans">Famous Landmarks</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6968/gigapans" class="media"><img alt="78382f08e86e252be934937da5253f94" height="100" src="/images0/78/38/78382f08e86e252be934937da5253f94.jpg?1323470862" width="100" /></a>
+    <p class="views">6 GigaPans<span>Views</span></p>
+<p>Explore this collection of gigapans capturing famous landmarks.</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>1.14479 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>2781</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=architectural">architectural</a>, <a href="/galleries?categories=cityscapes">cityscapes</a>, <a href="/galleries?categories=landscape">landscape</a>, <a href="/galleries?categories=street">street</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6968">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/7353/gigapans">City Scapes</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/7353/gigapans" class="media"><img alt="633d4a4f9edf7f6d4b47478689492b6d" height="100" src="/images0/63/3d/633d4a4f9edf7f6d4b47478689492b6d.jpg?1324590802" width="100" /></a>
+    <p class="views">24 GigaPans<span>Views</span></p>
+<p>City Scape Panoramas</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/digitalbob">Robert  Holmes</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>1.37336 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>2524</dd>
+        <dt>Dated added</dt>
+        <dd>December 22, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=cityscapes">cityscapes</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-7353"><a href="/galleries?tags=digitalbob">digitalbob</a></dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/8436/gigapans">Space Shuttle Discovery</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/8436/gigapans" class="media"><img alt="Gallery-icon" height="100" src="/images/gallery-icon.jpg?1347989739" width="100" /></a>
+    <p class="views">5 GigaPans<span>Views</span></p>
+<p>Space Station GigaPans</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>1.90708 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>2016</dd>
+        <dt>Dated added</dt>
+        <dd>April 16, 2012</dd>
+        <dt>Categories</dt>
+        <dd>&nbsp;</dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-8436">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6970/gigapans">Nature</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6970/gigapans" class="media"><img alt="Ac918769deb0b44927026fd24745b9a2" height="100" src="/images0/ac/91/ac918769deb0b44927026fd24745b9a2.jpg?1323475885" width="100" /></a>
+    <p class="views">5 GigaPans<span>Views</span></p>
+<p>GigaPans shot in nature.</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.740096 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>1787</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=nature">nature</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6970">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6965/gigapans">Architecture</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6965/gigapans" class="media"><img alt="4fa1ffeb286d439920a5c6ca639ee270" height="100" src="/images0/4f/a1/4fa1ffeb286d439920a5c6ca639ee270.jpg?1323469645" width="100" /></a>
+    <p class="views">9 GigaPans<span>Views</span></p>
+<p>GigaPans of architecture from around the world.</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.447152 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>1721</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=architectural">architectural</a>, <a href="/galleries?categories=cityscapes">cityscapes</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6965">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6180/gigapans">Underwater</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6180/gigapans" class="media"><img alt="94c33f34a74258cbec9a907b411f7530" height="100" src="/images0/94/c3/94c33f34a74258cbec9a907b411f7530.jpg?1323263773" width="100" /></a>
+    <p class="views">8 GigaPans<span>Views</span></p>
+<p>Underwater Panoramas of coral reefs, fishes, whales, sharks and more!</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/odyssey">Jason Buchheim</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.0510629 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>1393</dd>
+        <dt>Dated added</dt>
+        <dd>November 26, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=macro">macro</a>, <a href="/galleries?categories=nature">nature</a>, <a href="/galleries?categories=underwater">underwater</a>, <a href="/galleries?categories=environmental">environmental</a>, <a href="/galleries?categories=experimental">experimental</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6180"><a href="/galleries?tags=underwater+coral+reef+fishes+marine+biology">underwater coral reef fishes marine biology</a></dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6964/gigapans">Mosaic</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6964/gigapans" class="media"><img alt="B519ef7910dbd295a5ad862df3ccc727" height="100" src="/images0/b5/19/b519ef7910dbd295a5ad862df3ccc727.jpg?1323468086" width="100" /></a>
+    <p class="views">4 GigaPans<span>Views</span></p>
+<p>Check out this collection of GigaPans made of mosaic tiles</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.312881 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>1054</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd>&nbsp;</dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6964">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/4924/gigapans">Grand Canyon GigaView</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/4924/gigapans" class="media"><img alt="F1dfe9fc63b194505de486fe5cd73d45" height="100" src="/images0/f1/df/f1dfe9fc63b194505de486fe5cd73d45.jpg?1321912513" width="100" /></a>
+    <p class="views">27 GigaPans<span>Views</span></p>
+<p>A gigapixel virtual tour via the Colorado River of America's premier natural attraction.</p>
+
+<p>Grand Canyon GigaView was crowd-source funded via <a href='http://Kickstarter.com' rel='nofollow' target='_blank'>Kickstarter.com&nbsp;<img src='/images/external_link.png' alt='Will open in a new tab or window' /></a> in the spring of 2010.  It's 27 images, most of which are full 360 degree panoramas, were captured alongside the Colorado River over the course on an 18 day private rafting trip.  The photographer rowed one of the rafts through over 180 named rapids in the course of the 225 mile trip.</p>
+
+<p>To date, Grand Canyon GigaView has been explored by almost half a million people on various platforms including <a href='http://GigaPan.com' rel='nofollow' target='_blank'>GigaPan.com&nbsp;<img src='/images/external_link.png' alt='Will open in a new tab or window' /></a>, <a href='http://Photosynth.net' rel='nofollow' target='_blank'>Photosynth.net&nbsp;<img src='/images/external_link.png' alt='Will open in a new tab or window' /></a>, Google Earth, Bing Maps, and <a href='http://360Cities.net' rel='nofollow' target='_blank'>360Cities.net&nbsp;<img src='/images/external_link.png' alt='Will open in a new tab or window' /></a>. </p>
+
+<p>Learn more about the trip with standard photos &amp; video 
+<br /><a href='http://gigapanmagazine.org/vol3/issue1/' rel='nofollow' target='_blank'>http://gigapanmagazine.org/vol3/issue1/&nbsp;<img src='/images/external_link.png' alt='Will open in a new tab or window' /></a></p>
+
+<p>Grand Canyon GigaView is a project by Thomas Hayden.  Thomas has shot over 400 gigapixel panoramas in the two years since the Canyon, including the world's largest stage at U2's 360 Tour and on the field for the NFL.  He continues to shoot daily for clients and for fun in and around his home in Portland, Oregon.</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaView360">Thomas Hayden</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.261994 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>983</dd>
+        <dt>Dated added</dt>
+        <dd>November 21, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=environmental">environmental</a>, <a href="/galleries?categories=experimental">experimental</a>, <a href="/galleries?categories=fine+art">fine art</a>, <a href="/galleries?categories=landscape">landscape</a>, <a href="/galleries?categories=nature">nature</a>, <a href="/galleries?categories=photojournalism">photojournalism</a>, <a href="/galleries?categories=portrait">portrait</a>, <a href="/galleries?categories=sports">sports</a>, <a href="/galleries?categories=travel">travel</a>, <a href="/galleries?categories=virtual+reality">virtual reality</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-4924"><a href="/galleries?tags=mapping">mapping</a>, <a href="/galleries?tags=gigapixel">gigapixel</a>, <a href="/galleries?tags=virtual+tour">virtual tour</a>, <a href="/galleries?tags=national+park">national park</a>, <a href="/galleries?tags=gigaview">gigaview</a>, <a href="/galleries?tags=camp">camp</a>, <a href="/galleries?tags=whitewater">whitewater</a>, <a href="/galleries?tags=rafting">rafting</a>, <a href="/galleries?tags=raft">raft</a>, <a href="/galleries?tags=camping">camping</a>, <a href="/galleries?tags=mountains">mountains</a>, <a href="/galleries?tags=gear">gear</a>, <a href="/galleries?tags=debris">debris</a>, <a href="/galleries?tags=gigaview">gigaview</a>, <a href="/galleries?tags=waterfall">waterfall</a>, <a href="/galleries?tags=creek">creek</a>, <a href="/galleries?tags=beach">beach</a>, <a href="/galleries?tags=cavern">cavern</a>, <a href="/galleries?tags=sun">sun</a>, <a href="/galleries?tags=erosion">erosion</a>, <a href="/galleries?tags=evening">evening</a>, <a href="/galleries?tags=shadow">shadow</a>, <a href="/galleries?tags=flow">flow</a>, <a href="/galleries?tags=cave">cave</a>, <a href="/galleries?tags=people">people</a>, <a href="/galleries?tags=boats">boats</a>, <a href="/galleries?tags=sandstone">sandstone</a>, <a href="/galleries?tags=desert">desert</a>, <a href="/galleries?tags=360">360</a>, <a href="/galleries?tags=ecology">ecology</a>, <a href="/galleries?tags=geomorphism">geomorphism</a>, <a href="/galleries?tags=kayak">kayak</a></dd>
+               
+
+    </dl>
+</div>
+
+    <h1>
+        <a href="/galleries/6973/gigapans">Aerial GigaPans</a> 
+        
+    </h1>
+
+<div class="section-gigapan-view"> <a href="/galleries/6973/gigapans" class="media"><img alt="F62bd51f2b69685d80ce9540b6a3f979" height="100" src="/images0/f6/2b/f62bd51f2b69685d80ce9540b6a3f979.jpg?1323477338" width="100" /></a>
+    <p class="views">3 GigaPans<span>Views</span></p>
+<p>Captivating aerial gigapans shot from helicopters and satellite.</p>
+
+    <dl class="gigapan-meta">
+        <dt>Created by</dt>
+        <dd><a href="/profiles/GigaPanCurator">GigaPan Curator</a></dd>
+        <dt>Avg. Size</dt>
+        <dd>0.174146 gigapixels</dd>
+        <dt>Views</dt>
+        <dd>909</dd>
+        <dt>Dated added</dt>
+        <dd>December 09, 2011</dd>
+        <dt>Categories</dt>
+        <dd><a href="/galleries?categories=cityscapes">cityscapes</a>, <a href="/galleries?categories=night">night</a></dd>
+        <dt>Tags</dt>
+        <dd id="gallery-tag-links-6973">&nbsp;</dd>
+               
+
+    </dl>
+</div>
+
+
+
+	<div id="index-results-bottom" class="wrapper">
+			<div class='pager'>Go to page: <div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <span class="gap">&hellip;</span> <a href="/galleries?page=107">107</a> <a href="/galleries?page=2" class="next_page" rel="next">Next &raquo;</a></div></div>
+	</div> <!-- / index-results-bottom -->
+
+			
+</div>
+<!-- /inner -->
+ 
+<div id="footer">
+<div class="wrapper">
+<div class="col">   
+<h3>Gigapan</h3>
+            <ul>
+            	<li><a href="/signup">Become a Member</a></li>
+            	<li><a href="/cms/community-overview">Community</a></li>
+                <li><a href="/cms/about/media">News &amp; Updates</a></li>
+                <li><a href="/cms/about/clients">Who's using Gigapan?</a></li>  
+                <li><a href="/cms/about-us">About Us</a></li>
+                <li><a href="/sitemap.html">Site Map</a></li>
+            </ul>
+</div> <!-- / col --> 
+<div class="col">
+<h3>Products</h3>
+    <ul>
+                <li><a href="/cms/shop/store">EPIC Robotic Camera Mounts</a></li>
+                <li><a href="/cms/shop/software">Gigapan Stitch Software</a></li>
+                <li><a href="/cms/shop/reviews">Product Reviews</a></li>
+                <li><a href="/cms/support/gigapan-distributors">Gigapan Distributors</a></li>   
+	</ul>
+</div> <!-- / col -->
+
+<div class="col">
+<h3>Support</h3>
+            <ul>
+            	<li><a href="/cms/manuals">Manuals</a></li>
+                <li><a href="/cms/support/camera-compatibility">Camera Compatibility</a></li>
+                <li><a href="/forums">Forum</a></li>             
+                <li><a href="/cms/videos">Video Tutorials</a></li>
+            </ul>
+</div> <!-- / col -->   
+<div class="col">
+<h3>Contact Us</h3>
+            <ul>
+            	<li class="contactForm"><a href="#other-inquiries" name="modal">General Inquiries</a></li>
+                <li class="contactForm"><a href="#other-inquiries" name="modal">Business &amp; Press Inquiries</a></li>
+                <li class="contactForm"><a href="#tech-support" name="modal">Technical Support</a></li>
+                <li class="contactForm"><a href="#customer-service" name="modal">Customer Support</a></li>
+            </ul>
+</div>   <!-- / col -->
+        <div class="col">
+<h3>Our Policies</h3>
+            <ul>
+				<li><a href="/cms/about/usage">Privacy Policy</a></li>
+				<li><a href="/cms/about/terms">Terms of Use</a></li>
+				<li><a href="/cms/about/warranty-policy">Warranty Policy</a></li>	
+            </ul>
+        </div> <!-- / col -->
+<div class="clearfix"></div>
+<div class="copy">&copy; 2012 GigaPan Systems, all rights reserved.<br />
+GigaPan&#174; and the GigaPan logo are registered trademarks of Carnegie Mellon University licensed by GigaPan Systems.</div>
+    </div> <!-- / wrapper -->
+    </div> <!-- / footer -->
+   
+
+
+
+
+<!-- / container -->
+<div class="windows">
+<div id='popup-login' class='window'><div class='window_inner'> <h2>Welcome to GigaPan!</h2>
+<div class="user-actions">
+    <form class="login" method="post" action="/session">
+    	<p>Please log in...</p>
+        <input name='authenticity_token' type='hidden' value='qC5bDk7spZ+gPvdsNivrzy8/Ku0SSy1qveU9ioY5w10=' id='authenticity_token'/>
+        <div class="edit-field">
+            <label>Username</label>
+            <input id="login" name="login" class="txt" type="text" />
+        </div>
+        <div class="edit-field">
+            <label>Password</label>
+            <input id="password" name="password" class="txt" type="password" />
+        </div>
+        <div class="edit-field"> 
+	    	<span class="button">
+            	<input value="Log In" type="submit" />
+         	</span>
+		</div>
+		<a class="forgotPassword" href="/forgotten_passwords/new">Forgot your password?</a>
+
+    
+    </form>
+
+<div class="join">
+<p>Or create a a FREE GigaPan account!</p><br />
+<a href="/signup" class="button"> <span>Join Now </span> </a> </div>
+</div>
+ 
+     </div> </div>
+<div id="forms"></div>
+<div id="mask"></div>
+</div>
+
+</div>
+
+
+<script src="/javascripts/jquery.ui.selectmenu.js?1347989739" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+<script src="/javascripts/main.js?1347989739" type="text/javascript"></script>
+
+
+<script src="/javascripts/inheritance.js?1347989739" type="text/javascript"></script>
+<script src="/javascripts/iehover-fix.js?1347989739" type="text/javascript"></script>
+<script src="/javascripts/jquery.qtip.js?1347989739" type="text/javascript"></script>
+
+<!--[if lte IE 6]>
+<script src="/javascripts/DD_belatedPNG_0.0.8a-min.js?1347989739" type="text/javascript"></script>
+<script src="/javascripts/ie6.js?1347989739" type="text/javascript"></script>
+<![endif]-->
+<!-- Google Code for Remarketing tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1018265284;
+var google_conversion_label = "_TGECIykvAMQxP3F5QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1018265284/?value=0&amp;label=_TGECIykvAMQxP3F5QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","2d9820933c",486890,"c15eTUAOWV1XEUpeWFxdVUtbBEYeWw0BXEE=",0,1218,new Date().getTime(),"","","","",""])</script></body>
+</html>

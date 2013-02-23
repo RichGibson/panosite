@@ -1,0 +1,57 @@
+<!-- /Users/rich/wa/django/mysite/template/gigapan/index.html -->
+<!-- array/dict gigapans exists -->
+
+{% if p %}
+  Showing images tagged: <b>{{ p }}</b>
+  <form  action="/gigapan/" method="post"> <!--{ % csrf_token % } -->
+    <label for="id_oldtag">Existing Tag:</label>
+    <input id="id_oldtag" type="text" name="oldtag" maxlength="100" value="{{ p }}"/>
+    <label for="id_latitude">Existing Latitude:</label>
+    <input id="id_latitude" type="text" name="latitude" maxlength="100"/>
+    <label for="id_newtag">New Tag:</label>
+    <input id="id_newoldtag" type="text" name="newtag" maxlength="100"/>
+</p>
+  {{ form.as_p }}
+  {% for field in form %}
+field
+  <div class="fieldWrapper">
+      {{ field.errors }}
+      {{ field.label_tag }}: {{ field }}
+  </div>
+  {% endfor %}
+  <p>
+  <input type="submit" value="Add Tag" /></p>
+{% endif %}
+
+{% if gigapans %}
+<ul>
+{% for g in gigapans %}
+<a href="/gigapan/{{ g.id }}/">
+   <img src="{{ g.thumbnail_url}}" height="250" width="250">
+</a>
+{% if edit %}
+    <br>Edit<br>
+    <form action="/gigapan/index/" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+    </form>
+{% endif %}
+{% endfor %}
+{% else %}
+    <p>No gigapans meet filters, or none exist. .</p>
+{% endif %}
+
+<hr>
+Text listing
+{% if gigapans %}
+    <ol>
+    {% for g in gigapans %}
+        <li><a href="/gigapan/{{ g.id }}/">
+           {{ g.name }}
+        </a>
+    {% endfor %}
+{% else %}
+    <p>No gigapans meet filters, or none exist. .</p>
+{% endif %}
+
+

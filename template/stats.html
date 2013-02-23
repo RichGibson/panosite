@@ -1,0 +1,25 @@
+<!-- Basic Stats -->
+Author: {{stats.author}}<br>
+Gigapan Count: {{stats.gigapan_cnt}}<br>
+Total Pixels: {{stats.total_pixels}} gigapixels<br>
+Largest Image: {{stats.largest_pixels}} gigapixels. Link to <a href="/gigapan/{{stats.largest_id}}">{{ stats.largest_name }}</a><br>
+Average Image Size: {{stats.average_pixels}} gigapixels<br>
+
+<!-- this same basic user menu is duplicated in users.html, todo: integrate the two -->
+{{ stats.first_name }} {{ stats.last_name }} ({{ stats.author }})<a href="/users/{{ stats.gigapan_user_id }}/gigapans">{{ u.gigapan_user_id }} {{ u.username }} {{ u.first_name }} {{ u.last_name }} Gigapans </a>
+| <a href="/users/{{ stats.gigapan_user_id }}/gigapans.kml">KML</a>
+| <a href="/users/{{ stats.gigapan_user_id }}/tags">Tags</a> 
+| <a href="/users/{{ stats.gigapan_user_id }}/stats">Statistics</a> 
+| <a href="/users/{{ stats.gigapan_user_id }}/calendar">Calendar</a> 
+<hr>
+
+<!-- basic gigapan id gap tracking functionality. I got the SLUT to work in 15 minutes! -->
+{% if gigapans %}
+<h2>Gigapan ID 'gap'</h2>
+uploaded date, date gap, gigapan_id gap<p>
+{% for g in gigapans %}
+{{g.cnt}}:<!-- {{g.gigapan_id}},{{g.width}},{{g.height}},<--> {{g.uploaded}} | {{g.uploaded_gap}} | {{g.gap}}<br>
+{% endfor %}
+
+
+{% endif %}

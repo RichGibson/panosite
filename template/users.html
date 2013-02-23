@@ -1,0 +1,24 @@
+<h2>Gigapan Creators</h2>
+{% if users %}
+	<div>
+		<ol>
+            {% for u in users %}
+                <!-- this same basic user menu is duplicated in stats.html, todo: integrate the two -->
+                <li><a href="/users/{{ u.gigapan_user_id }}/gigapans">{{ u.gigapan_user_id }} {{ u.username }} {{ u.first_name }} {{ u.last_name }} Gigapans </a>
+                    | <a href="/users/{{ u.gigapan_user_id }}/gigapans.kml">KML</a>
+                    | <a href="/users/{{ u.gigapan_user_id }}/tags">Tags</a> 
+                    | <a href="/users/{{ u.gigapan_user_id }}/stats">Statistics</a> 
+                    | <a href="/users/{{ u.gigapan_user_id }}/chart">Charts</a> 
+                    | <a href="/users/{{ u.gigapan_user_id }}/calendar">Calendar</a>
+                     
+
+                </li>
+            {% endfor %}
+        <ol>
+	</div>
+	<div class="nav_local">
+		<!-- a href="/gigapans/{{ prev }}">Perv</a> - (page {{ page }}) - <a href="/gigapans/{{ next }}">Next</a -->
+	</div>
+{% else %}
+    <p>No users yet</p>
+{% endif %}

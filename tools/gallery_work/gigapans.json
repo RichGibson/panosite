@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<title>GigaPan - 500 Internal Server Error</title>
+		<link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE 8]><link href="/stylesheets/ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+		<!--[if lte IE 7]><link href="/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+		<!--[if lte IE 6]><link href="/stylesheets/ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+		<script src="/javascripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var $j = jQuery.noConflict();
+
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4157572-8']);
+			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageLoadTime']); (function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+	</head>
+	<body class="errorPage">
+		<div class="container">
+			<ol id="accessibility-nav">
+				<li>
+					<a href="#navigation">Skip to navigation</a>
+				</li>
+				<li>
+					<a href="#content">Skip to content</a>
+				</li>
+				<li>
+					<a href="#sidebar">Skip to sidebar</a>
+				</li>
+			</ol>
+			<!-- / accessibility-nav -->
+			<hr />
+			<div id="header">
+				<a href="/" class="site-name" title="Go to homepage" rel="home"><span></span></a>
+				<div id="top-nav">
+					<ul id="header-list">
+						<li class="with-flyout first">
+							<a href="/cms/community-overview" class="top-level">Community</a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li class="topmenu_subheading">
+										<a href="/gigapans">GigaPans</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/gigapans?order=most_recent">Most Recent</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/gigapans?order=most_popular">Most Popular</a>
+									</li>
+									<li class="topmenu_subheading">
+										<a href="/galleries/landing_page">Galleries</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/galleries?order=most_recent">Most Recent</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/galleries?order=most_popular">Most Popular</a>
+									</li>
+									<li>
+										<a href="/competitions/landing_page">Competitions</a>
+									</li>
+									<li>
+										<a href="/snapshots">Snapshots</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+						<li class="with-flyout">
+							<a href="/cms/shop/store" class="top-level">Store</a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li>
+										<a href="/cms/shop/epic-pro">EPIC Pro</a>
+									</li>
+									<li>
+										<a href="/cms/shop/epic-100">EPIC 100</a>
+									</li>
+									<li>
+										<a href="/cms/shop/epic">EPIC</a>
+									</li>
+									<li>
+										<a href="/cms/shop/parts">Accessories</a>
+									</li>
+									<li>
+										<a href="/cms/shop/software">GigaPan Stitch Software</a>
+									</li>
+									<li>
+										<a href="/cms/shop/gigapan-accessories">GigaPan Gear</a>
+									</li>
+									<li>
+										<a href="/gigatag">GigaTag</a>
+									</li>
+									<li>
+										<a href="/cms/shop/reviews">Product Reviews</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+						<li class="with-flyout">
+							<a href="/cms/support-overview" class="top-level">Support</a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li>
+										<a href="/cms/manuals">Manuals</a>
+									</li>
+									<li>
+										<a href="/cms/support/tech-specs">Tech Specs</a>
+									</li>
+									<li>
+										<a href="/cms/support/camera-compatibility">Compatible Cameras</a>
+									</li>
+									<li>
+										<a href="/cms/frequently-asked-questions">FAQs</a>
+									</li>
+									<li>
+										<a href="/cms/videos">Video Tutorials</a>
+									</li>
+									<li>
+										<a href="/forums">Discussions</a>
+									</li>
+									<li>
+										<a href="/cms/support/contact-support">Contact Support</a>
+									</li>
+									<li>
+										<a href="/cms/downloads">Downloads</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+						<li class="with-flyout">
+							<a href="/cms/about-us" class="top-level" id="menuAboutUs">About Us</a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li>
+										<a href="/cms/about/press-releases">Press &amp; Media</a>
+									</li>
+									<li>
+										<a href="/cms/about/usage">Our Policies</a>
+									</li>
+									<li>
+										<a href="/cms/about-us">About GigaPan</a>
+									</li>
+									<li><a href="/cms/about/careers">Careers</a></li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+					</ul>
+					<!-- / #header-list -->
+				</div>
+				<!-- / top-nav -->
+				<form action="/welcome/main_search" id="main-search-form" method="get">
+					<div id="filter-search" class="filter">
+						<fieldset>
+							<div class="search-form">
+								<fieldset>
+									<input class="search-txt" id="header-search" name="query" placeholder="Search" type="text" value="" />
+								</fieldset>
+							</div>
+						</fieldset>
+						<fieldset>
+							<select class="custom-select" id="header-search-show" include_blank="true" name="show">
+								<option value="gigapans" selected="selected">GigaPans</option>
+								<option value="galleries">Galleries</option>
+								<option value="groups">Groups</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<input type="submit" name="submit" id='header-search-submit' class="go-submit magnifyingGlassButton" value="Search" />
+						</fieldset>
+					</div>
+				</form>
+				<div id="navigation">
+					<ul class="topmenu">
+						<li class="with-flyout toproot first">
+							<a href="/cms/view" class="view-link"><span>View</span></a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li class="topmenu_subheading">
+										<a href="/gigapans">GigaPans</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/gigapans?order=most_recent">Most Recent</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/gigapans?order=most_popular">Most Popular</a>
+									</li>
+									<li class="topmenu_subheading">
+										<a href="/galleries/landing_page">Galleries</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/galleries?order=most_recent">Most Recent</a>
+									</li>
+									<li class="topmenu_subitem">
+										<a href="/galleries?order=most_popular">Most Popular</a>
+									</li>
+									<li>
+										<a href="/competitions/landing_page">Competitions</a>
+									</li>
+									<li>
+										<a href="/snapshots">Snapshots</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+						<li class="with-flyout toproot first">
+							<a href="/cms/create" class="create-link"><span>Create</span></a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li>
+										<a href="/cms/create-make">Make GigaPans</a>
+									</li>
+									<li>
+										<a href="/cms/create-embed">Embed</a>
+									</li>
+									<li>
+										<a href="/cms/create-games">Games</a>
+									</li>
+									<li>
+										<a href="/cms/create-advanced-techniques">Techniques</a>
+									</li>
+									<li>
+										<a href="/cms/create-upload">Upload</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+						<li class="with-flyout toproot">
+							<a href="/cms/use" class="use-link"><span>Use</span></a>
+							<div class="flyout">
+								<div class="top"></div>
+								<ul>
+									<li>
+										<a href="/cms/use-share">Share</a>
+									</li>
+									<li>
+										<a href="/cms/use-learn">Learn</a>
+									</li>
+									<li>
+										<a href="/cms/use-promote">Promote</a>
+									</li>
+									<li>
+										<a href="/cms/use-engage">Engage</a>
+									</li>
+									<li>
+										<a href="/cms/use-gigatag">GigaTag</a>
+									</li>
+								</ul>
+								<div class="bottom"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- / navigation -->
+			</div>
+			<!-- / header -->
+			<hr />
+			<div id="top">
+				<div class="wrapper">
+					<h1>500 Internal server error</h1>
+				</div><!-- / wrapper -->
+			</div>
+			<!-- / top -->
+			<div class="wrapper">
+				<div id="middle">
+					<h1>We're sorry, but something went wrong.</h1>
+				</div>
+			</div>
+			<div id="inner">
+				<div class="sub_page_sections">
+					<p>
+						We've been notified about this issue and we'll take a look at it shortly. Please <a href="/cms/support/contact-support">contact us</a> if you have any questions or comments.
+					</p>
+					<p>
+						To get you back on track, we suggest one of the following:
+					</p>
+					<ul class="optionsList">
+						<li>
+							<a href="http://gigapan.org/">Home</a>
+						</li>
+						<li>
+							<a href="/gigapans">View Gigapans</a>
+						</li>
+						<li>
+							<a href="/support/contact-support">Contact us</a>
+						</li>
+						<li>
+							<a href="/sitemap.html">Site Map</a>
+						</li>
+					</ul>
+				</div><!-- / SubPageSections -->
+			</div>
+			<!-- / inner -->
+			<div id="footer">
+			<div class="wrapper">
+			<div class="col">   
+			<h3>Gigapan</h3>
+			            <ul>
+			            	<li><a href="/signup">Become a Member</a></li>
+			            	<li><a href="/cms/community-overview">Community</a></li>
+			                <li><a href="/cms/about/media">News &amp; Updates</a></li>
+			                <li><a href="/cms/about/clients">Who's using Gigapan?</a></li>  
+			                <li><a href="/cms/about-us">About Us</a></li>
+			                <li><a href="/sitemap.html">Site Map</a></li>
+			            </ul>
+			</div> <!-- / col --> 
+			<div class="col">
+			<h3>Products</h3>
+			    <ul>
+			                <li><a href="/cms/shop/store">EPIC Robotic Camera Mounts</a></li>
+			                <li><a href="/cms/shop/software">Gigapan Stitch Software</a></li>
+			                <li><a href="/cms/shop/reviews">Product Reviews</a></li>
+			                <li><a href="/cms/support/gigapan-distributors">Gigapan Distributors</a></li>   
+				</ul>
+			</div> <!-- / col -->
+
+			<div class="col">
+			<h3>Support</h3>
+			            <ul>
+			            	<li><a href="/cms/manuals">Manuals</a></li>
+			                <li><a href="/cms/support/camera-compatibility">Camera Compatibility</a></li>
+			                <li><a href="/forums">Forum</a></li>             
+			                <li><a href="/cms/videos">Video Tutorials</a></li>
+			            </ul>
+			</div> <!-- / col -->   
+			<div class="col">
+			<h3>Contact Us</h3>
+			            <ul>
+			            	<li class="contactForm"><a href="#other-inquiries" name="modal">General Inquiries</a></li>
+			                <li class="contactForm"><a href="#other-inquiries" name="modal">Business &amp; Press Inquiries</a></li>
+			                <li class="contactForm"><a href="#tech-support" name="modal">Technical Support</a></li>
+			                <li class="contactForm"><a href="#customer-service" name="modal">Customer Support</a></li>
+			            </ul>
+			</div>   <!-- / col -->
+			        <div class="col">
+			<h3>Our Policies</h3>
+			            <ul>
+							<li><a href="/cms/about/usage">Privacy Policy</a></li>
+							<li><a href="/cms/about/terms">Terms of Use</a></li>
+							<li><a href="/cms/about/warranty-policy">Warranty Policy</a></li>	
+			            </ul>
+			        </div> <!-- / col -->
+			<div class="clearfix"></div>
+			<div class="copy">&copy; 2012 GigaPan Systems, all rights reserved.<br />
+			GigaPan&#174; and the GigaPan logo are registered trademarks of Carnegie Mellon University licensed by GigaPan Systems.</div>
+			    	    </div> <!-- / footer -->
+					    </div> <!-- / wrapper -->
+				</div><!-- / container -->
+		<div class="windows">
+			<div id='popup-login' class='window'>
+				<div class='window_inner'>
+					<h2>Welcome to GigaPan!</h2>
+					<div class="user-actions">
+						<form class="login" method="post" action="/session">
+							<p>
+								Please log in...
+							</p>
+							<input name='authenticity_token' type='hidden' value='F1HsdxPqhHTG8ohlJ8kITtWhsU9YlFhtH5KZkpP1CC8=' id='authenticity_token'/>
+							<div class="edit-field">
+								<label>Username</label>
+								<input id="login" name="login" class="txt" type="text" />
+							</div>
+							<div class="edit-field">
+								<label>Password</label>
+								<input id="password" name="password" class="txt" type="password" />
+							</div>
+							<div class="actions">
+								<span class="button">
+									<input value="Log In" type="submit" />
+								</span>
+							</div>
+						</form>
+						<div class="join">
+							<p>
+								Or create a a FREE GigaPan account!
+							</p>
+							<a href="/signup" class="button"> <span>Join Now </span> </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="forms"></div>
+			<div id="mask"></div>
+		</div>
+		<script src="/viewer/js/swfobject.js" type="text/javascript"></script>
+		<script src="/javascripts/error-sitemap.js" type="text/javascript"></script>
+		<script src="/javascripts/iehover-fix.js" type="text/javascript"></script>
+		<!--[if lte IE 6]>
+		<script src="/javascripts/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+		<script src="/javascripts/ie6.js" type="text/javascript"></script>
+		<![endif]-->
+		<script src="/javascripts/jquery.lightbox-0.5.js" type="text/javascript"></script>
+	</body>
+</html>

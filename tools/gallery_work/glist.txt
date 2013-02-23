@@ -1,0 +1,63 @@
+							<a href="/galleries/landing_page" id="menuViewGalleries">Galleries</a>
+        <a href="/galleries/7748/gigapans">Yellowstone National Park Geology</a> 
+				<h2>GigaPans in this gallery</h2><h3>Learn more and <a href="/galleries/new">make a gallery</a></h3>
+  <li><a href="/galleries/7748/gigapans/66287">Artist Point - Yellow Stone National Park</a> by <a href="/profiles/Alfred">Alfred  Zhao</a></li>
+  <li><a href="/galleries/7748/gigapans/30677">Yellowstone Falls from Artists Point (Afternoon)</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/30056">Henry&#039;s Lake, Idaho</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/30717">Lower Yellowstone Falls from Artists Point (Morning)</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31490">Midway Geyser Basin - Yellowstone National Park (WY)</a> by <a href="/profiles/East_of_Hellas">Jen Piatek</a></li>
+  <li><a href="/galleries/7748/gigapans/5615">Only (Continuously) Surviving Herd of Bison in North America, near Old Faithful Geyer, Yellowstone National Park</a> by <a href="/profiles/jasonc">Jason Campbell</a></li>
+  <li><a href="/galleries/7748/gigapans/60624">Old Faithful Geyser, Yellowstone National Park, Wyoming USA</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/5841">Artists Point, Grand Canyon of the Yellowstone, Yellowstone National Park</a> by <a href="/profiles/jasonc">Jason Campbell</a></li>
+  <li><a href="/galleries/7748/gigapans/5614">Giant Geyser, Yellowstone National Park</a> by <a href="/profiles/jasonc">Jason Campbell</a></li>
+  <li><a href="/galleries/7748/gigapans/21658">7-color Lake, Yellowstone  --  Earth Day 2009 (4)</a> by <a href="/profiles/miao">miao</a></li>
+  <li><a href="/galleries/7748/gigapans/59138">Norris Geyser Basin - Yellow Stone National Park</a> by <a href="/profiles/Alfred">Alfred  Zhao</a></li>
+  <li><a href="/galleries/7748/gigapans/29645">Artist Point Yellowstone National Park looking downstream</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/59088">Lower Geyser Basin - Yellow Stone National Park</a> by <a href="/profiles/Alfred">Alfred  Zhao</a></li>
+  <li><a href="/galleries/7748/gigapans/31070">Obsidian Cliff, Firehole River, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31185">Travertine Roadcut below Mammoth Hot Springs, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/49303">Grand Canyon of the Yellowstone River from Artists Point</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/586">Grand Prismatic Spring, Yellowstone National Park.</a> by <a href="/profiles/perduejn">James Perdue</a></li>
+  <li><a href="/galleries/7748/gigapans/5643">Old Faithful Geyser, Yellowstone National Park</a> by <a href="/profiles/jasonc">Jason Campbell</a></li>
+  <li><a href="/galleries/7748/gigapans/11061">Mammoth Hot Springs, Yellowstone National Park</a> by <a href="/profiles/Obernesser">Bill Obernesser</a></li>
+  <li><a href="/galleries/7748/gigapans/31097">Huckleberry Ridge Tuff Angular Unconformity near Gardiner, Montana</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/59054">Artist Point - Yellow Stone National Park</a> by <a href="/profiles/Alfred">Alfred  Zhao</a></li>
+  <li><a href="/galleries/7748/gigapans/31288">Gardiner River Conglomerates, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/6684">Sapphire Pool Yellowtone Nat. Park</a> by <a href="/profiles/Djmreon">Eon Day</a></li>
+  <li><a href="/galleries/7748/gigapans/29991">Hayden Valley, Yellowstone National Park</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/23967">Beaver Creek Trail, Yellowstone</a> by <a href="/profiles/sashahc">Sasha Harris-Cronin</a></li>
+  <li><a href="/galleries/7748/gigapans/31121">Midway Geyser Basin, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/6758">Bacteria Mat at Fountain Paint Pots</a> by <a href="/profiles/Djmreon">Eon Day</a></li>
+  <li><a href="/galleries/7748/gigapans/6896">Yellowstone Grand Canyon</a> by <a href="/profiles/Djmreon">Eon Day</a></li>
+  <li><a href="/galleries/7748/gigapans/27273">Lower Terraces, Mammoth Hot Springs, Yellowstone N.P., Wyoming </a> by <a href="/profiles/John%20De%20Carteret">John De Carteret</a></li>
+  <li><a href="/galleries/7748/gigapans/31222">Mammoth Hot Springs, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/11004">Midway Geyser Basin, Yellowstone</a> by <a href="/profiles/Obernesser">Bill Obernesser</a></li>
+  <li><a href="/galleries/7748/gigapans/29725">Lower Yellowstone Falls</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/15471">Yellowstone&#039;s Grand Prismatic Spring</a> by <a href="/profiles/Rebele93">Mike Bryant</a></li>
+  <li><a href="/galleries/7748/gigapans/31022">Lewis River Canyon, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31338">Yellowstone River Valley near Tower Falls</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/10980">Geyser Hill &amp; Old Faithful, Yellowstone</a> by <a href="/profiles/Obernesser">Bill Obernesser</a></li>
+  <li><a href="/galleries/7748/gigapans/30678">Grand Canyon of the Yellowstone, Downstream from Artists Point</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/10972">West Thumb, Central Basin, Yellowstone National Park</a> by <a href="/profiles/Obernesser">Bill Obernesser</a></li>
+  <li><a href="/galleries/7748/gigapans/31033">Lewis River Rapids, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31085">Silex Pool, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31102">Orange Spring Mound, Mammoth Hot Springs, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/30958">Morning Glory Pool - Yellowstone National Park</a> by <a href="/profiles/East_of_Hellas">Jen Piatek</a></li>
+  <li><a href="/galleries/7748/gigapans/5609">Grand Canyon of the Yellowstone, Artist Point Overlook, Yellowstone National Park (low res/0.3GP)</a> by <a href="/profiles/jasonc">Jason Campbell</a></li>
+  <li><a href="/galleries/7748/gigapans/31339">Columnar Basalts 1.0</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31340">Columnar Basalts 1.1</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31266">Obsidian-bearing Lahar Deposits, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/61650">Porcelain Basin/Norris Geyser Basin - Yellowstone National Park, Wyoming, USA</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/31267">Lamar River Valley Bison Herd, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/57402">Grand Prismatic Spring Valley, Yellowstone National Park</a> by <a href="/profiles/atjxe1">JJ Elser</a></li>
+  <li><a href="/galleries/7748/gigapans/30836">Geyser Hill, Old Faithful Area, Yellowstone National Park</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/1224">A view from the top of Mt. Washburn in Yellowstone National Park, WY - 9/8/05</a> by <a href="/profiles/medix">Ben  McMillen</a></li>
+  <li><a href="/galleries/7748/gigapans/30824">Lower Mesa Falls, Island Park area, Idaho</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/31224">Firehole River Rapids, Yellowstone National Park</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/31078">Distant Steam</a> by <a href="/profiles/rschott">Ron Schott</a></li>
+  <li><a href="/galleries/7748/gigapans/24537">Norris Geyser Basin, Yellowstone NP</a> by <a href="/profiles/sashahc">Sasha Harris-Cronin</a></li>
+  <li><a href="/galleries/7748/gigapans/26865">Lamar Valley, Yellowstone National Park.</a> by <a href="/profiles/John%20De%20Carteret">John De Carteret</a></li>
+  <li><a href="/galleries/7748/gigapans/3503">Geysers at Yellowstone</a> by <a href="/profiles/thk20d">Travis King</a></li>
+  <li><a href="/galleries/7748/gigapans/29486">Great Fountain Geyser Erupting (Version #2)</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/29660">Upper Yellowstone Falls</a> by <a href="/profiles/gogrimm">Gary Grimm</a></li>
+  <li><a href="/galleries/7748/gigapans/1225">Norris Geyser Basin, Yellowstone National Park, WY - 9/7/05</a> by <a href="/profiles/medix">Ben  McMillen</a></li>

@@ -1,0 +1,22 @@
+<h2>Galleries</h2>
+
+{% if galleries %}
+	<div class="nav_local">
+		Sorted by something Galleries {{ start }} to {{ end }} 
+		<a href="/galleries/{{ prev }}">Perv</a> - (page {{ page }}) - <a href="/galleries/{{ next }}">Next</a>
+		<hr>
+	</div>
+	<div >
+		<ol>
+			{% for g in galleries %}
+				<li><a href="/gigapans/gallery/{{ g.id }}">{{g.name}} ({{g.owner}})</a>{{ g.gallery_id }}</li> 
+			{% endfor %}
+		</ol>
+	</div>
+	<div class="nav_local">
+		<a href="/galleries/{{ prev }}">Perv</a> - (page {{ page }}) - <a href="/galleries/{{ next }}">Next</a>
+	</div>
+{% else %}
+    <p>No galleries meet filters, or none exist. .</p>
+{% endif %}
+

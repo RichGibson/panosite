@@ -1,0 +1,33 @@
+
+<h2>GigaPan Feature Annotation Tool - GFAT</h2>
+<h3>Vector annotation of GigaPans</h3>
+{% if gigapan %}
+    <p>
+    <div>
+        <iframe src="http://www.gigapan.com/mobile/iOS/1.0/?id={{ gigapan.gigapan_id }}" width="800" height="600"></iframe>
+    </	div>
+{% else %}
+    <p>No gigapan found meet filters, or none exist. .</p>
+{% endif %}
+
+<pre>
+Notes: <br>
+Vector annotation...provide point, line, and polygon annotations. Each annotation gets a title, description, and 
+geometry.
+
+
+Possible Annotation Model:
+class Annotation(models.Model):
+	gigapan_id  = models.ForeignKey(Gigapan)
+	user_id     = models.ForeignKey(User)
+	name        = models.CharField(max_length=200)
+	description = models.TextField()
+    annotation  = Geometry
+    tags = TaggableManager()
+
+
+What do I need to do?
+-install openlayers, get vector annotation of an OSM map writing to my database
+-find/write code to use gigapan as an openlayers tile source
+</pre>
+

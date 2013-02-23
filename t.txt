@@ -1,0 +1,23 @@
+Tasks:
+<ul>
+<li>check dates in my model, missing create date?, add to model.
+<li>update code - to update fields from gigapan.org, like new dates, tags, ? 
+<li>
+<li>
+<li>
+<li>
+</ul>
+
+Notes: I want geo django, and probably spatialite for sqlite3, (https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/)
+but it seems easier for now to do the simplest least useless thing
+<hr>
+Gigapan Feature Annotation Tool...GFAT
+--open layers on top of gigapan with vector annotation
+--
+<hr>
+
+<hr>
+dichotomous keys from snapshots
+<hr>
+<hr>
+

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Gigapans {{ header }}</name>
+	<open>1</open>
+	<LookAt>
+		<longitude>{{ lookAt.longitude }}</longitude>
+		<latitude>{{ lookAt.latitude }}</latitude>
+		<altitude>0</altitude>
+		<range>4198713</range>
+		<tilt>0</tilt>
+		<heading>0</heading>
+		<altitudeMode>relativeToGround</altitudeMode>
+	</LookAt>
+	<Style id="waypoint_h00">
+		<IconStyle>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_h13">
+		<IconStyle>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_n13">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_h01">
+		<IconStyle>
+			<color>fffffcd0</color>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.8</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_n00">
+		<IconStyle>
+			<color>fffffcd0</color>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.8</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_n01">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h00</styleUrl>
+		</Pair>
+	</StyleMap>
+{% if gigapans %}
+    {% for g in gigapans %}
+        {% if g.latitude != None %}
+            <PhotoOverlay id="gigapan_{{g.gigapan_id}}">
+                <name>{{g.name}}</name>
+
+                <Snippet maxLines="1">
+                <![CDATA[<a href="#gigapan_{{g.gigapan_id}}">Enter panorama</a>]]>
+                </Snippet>
+             
+                <description>
+                <![CDATA[
+        
+                  <div align="center">
+        
+                  <table width="500"><tr><td>
+                <!-- GigaPan logo
+                  <a href="http://gigapan.com">
+                    <img alt="Logo" src='http://gigapan.com/images/logo.png?1347989801/' />
+                  </a>
+                -->  
+                  </td><td>
+                    <!-- This is the large duplicate of the name. 
+                    <font size="10">$[name]</font>
+                    <hr>
+                    <a href="#gigapan_{{g.gigapan_id}};flyto">Enter Panorama</a> |
+                    <a href="http://gigapan.com/gigapans/{{g.gigapan_id}}">
+                      "Panorama at GigaPan.com"</a>
+                  </td>
+                  </tr>
+                  <tr><td colspan="2" align="center">
+                  <a href="#gigapan_{{g.gigapan_id}}"><img alt="{{g.gigapan_id}}-500x259" class="thumbnail" src="http://static.gigapan.org/gigapans0/{{g.gigapan_id}}/images/{{g.gigapan_id}}-500x259.jpg" /></a>
+                  </a>
+
+                  </td></tr>
+                  <tr><td colspan="2">
+        
+                  <p>{{g.description}}</p>
+                  <p>Explore Score: $[score]</p>
+                  <p align="right">
+                  <b>Author</b>: 
+                    <a href="http://gigapan.com/profiles/{{g.owner_id}}">
+                      {{g.owner_id}} (owner name tk)
+                    </a>
+                   </p>
+                    
+                  </td></tr></table>
+                  </div>
+        
+                ]]>
+              </description>
+              
+              <Camera id="gigapan_{{g.gigapan_id}}_camera">
+                <longitude>{{g.longitude}}</longitude>
+                <latitude>{{g.latitude}}</latitude>
+                <altitude>{{g.altitude}}</altitude>
+                <heading>{{g.heading}}</heading>
+                <tilt>{{g.tilt}}</tilt>
+                <roll>{{g.roll}}</roll>
+              </Camera>
+        
+              <styleUrl>#panoramaStyle</styleUrl>
+        
+              <ExtendedData>
+                <Data name="score">
+                  <value></value>
+                </Data>
+              </ExtendedData>  
+            
+              <color>feffffff</color>
+        
+              <Icon>
+                <href>http://gigapan.com/get_ge_tile/{{g.gigapan_id}}/$[level]/$[y]/$[x]</href>
+              </Icon>
+        
+              <rotation>0.0</rotation>
+
+              <ViewVolume id="gigapan_{{g.gigapan_id}}_viewvolume">
+                <leftFov>-{{ g.field_of_view_half }}</leftFov>
+                <rightFov>{{ g.field_of_view_half }}</rightFov>
+                <bottomFov>{{ g.field_of_view_b }}</bottomFov>
+                <topFov>{{ g.topFov }}</topFov>
+                <near>{{ g.distance }}</near>
+              </ViewVolume>
+        
+              <ImagePyramid>
+                <tileSize>256</tileSize>
+                <maxWidth>{{g.width}}</maxWidth>
+                <maxHeight>{{g.height}}</maxHeight>
+                <gridOrigin>upperLeft</gridOrigin>
+              </ImagePyramid>
+        
+              <Point id="gigapan_{{ g.gigapan_id }}_point">
+                <coordinates>{{ g.longitude }},{{ g.latitude }}</coordinates>
+              </Point>
+              
+              <shape>sphere</shape>
+            </PhotoOverlay>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</Document>
+</kml>

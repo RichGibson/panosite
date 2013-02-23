@@ -1,0 +1,36 @@
+
+<h2>{{ gallery.name }}</h2>
+created by: {{ gallery.owner }}<br>
+description: {{ gallery.description }}<br>
+<a href="http://gigapan.com/galleries/{{ gallery.gallery_id }}/gigapans" target=_top>http://gigapan.com/galleries/{{ gallery.gallery_id }}/gigapans</a><br>
+
+{% if gigapans %}
+	<hr>
+	Sorted by gigapan_id descending. Images {{ start }} to {{ end }}
+	<a href="/gigapans/{{ prev }}">Perv</a> - (page {{ page }}) - <a href="/gigapans/{{ next }}">Next</a><hr>
+	<div>
+	<ul >
+	{% for g in gigapans %}
+		<div class="gigapan_thumbnail">
+			<a href="/gigapan/{{ g.id }}"  class="hoverbaby" >
+			   <img src="/static/img/{{ g.thumbnail_filename}}" height="250" width="250">
+				 <!-- <p>{{g.name}}{{g.updated}}</p> -->
+			</a>
+		</div
+		{% if edit %}
+			<br>Edit<br>
+			<form action="/gigapan/index/" method="post">{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Submit" />
+			</form>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	</div>
+	<p>
+	<hr>
+	<a href="/gigapans/{{ prev }}">Perv</a> - (page {{ page }}) - <a href="/gigapans/{{ next }}">Next</a>
+{% else %}
+	<hr>
+    <p>No gigapans meet filters, or none exist. .</p>
+{% endif %}

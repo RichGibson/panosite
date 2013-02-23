@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Gigapans</name>
+	<open>1</open>
+	<LookAt>
+		<longitude>-119.2212214204114</longitude>
+		<latitude>40.76779767438008</latitude>
+		<altitude>0</altitude>
+		<range>5305.934661840346</range>
+		<tilt>0</tilt>
+		<heading>-0.01630641961863074</heading>
+		<altitudeMode>relativeToGround</altitudeMode>
+	</LookAt>
+	<Style id="waypoint_h00">
+		<IconStyle>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_h13">
+		<IconStyle>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_n13">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_h01">
+		<IconStyle>
+			<color>fffffcd0</color>
+			<scale>0.48</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.8</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="waypoint_n00">
+		<IconStyle>
+			<color>fffffcd0</color>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.8</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_n01">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="waypoint14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h00</styleUrl>
+		</Pair>
+	</StyleMap>
+{% if gigapans %}
+    {% for g in gigapans %}
+        {% if g.latitude != None %}
+        <Placemark>
+            <name>{{ g.name }}</name>
+            <styleUrl>#waypoint13</styleUrl>
+            <Point>
+                <altitudeMode>absolute</altitudeMode>
+                <coordinates>{{ g.longitude }},{{ g.latitude }},0</coordinates>
+            </Point>
+          </Placemark>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</Document>
+</kml>

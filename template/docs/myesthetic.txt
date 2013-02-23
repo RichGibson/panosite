@@ -1,0 +1,35 @@
+How has my esthetic changed over time? Can I quantify the uncountable?
+
+Jay and I are looking at actual stats of my aspect ratios...these are numbers and graphs which are 
+attempting to explore my esthetic, as evidenced by my choices of subjects and aspect ratios.
+
+There are real variations.
+
+For example, figure: rich_gigapan_aspect_ratio01.eps
+This is a histogram of gigapans, where the aspect ratio is less than 5:1, aspect ratio along
+the x axis, number of gigapans in that aspect ratio 'bucket' on y.
+There is a whole and then a spike...what does it mean :-)
+
+Do my preferred aspect ratios vary with time?
+
+
+
+rich_gigapan_aspect_ratio02.eps
+shows aspect ratios sorted, against an arbitrary gigapan count. Where the line is vertical I took no
+gigapans in that aspect ratio range.
+
+what is there about the aspect ratio 1.9:1 that I took no gigapans?
+
+Quantifying my artistic taste.
+
+graph 3, aspect ratio compared with gigapan experience.
+
+Did I pick different aspect ratios over time as I learned more? Did I respond to the tools with changes
+in creative choices?
+
+the first graphs had the earliest and latest gigapans reversed - so early was to the right, not applicaple for the histograms...
+
+graph4 aspect ration compared with gigapan experience with lines - the right, more recent, gigapans are more square, mapping to my 
+experience of doing portraits and more square images of CORE art.
+
+thought: how unique is width and height? can I use them to fingerprint an image?

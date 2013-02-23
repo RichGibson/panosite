@@ -1,0 +1,172 @@
+<h2>Generating Gigapan Thumbnails</h2>
+
+The GigaPan.com site provides an API which will generate arbitrary sized thumbnails for GigaPan images.
+
+The format is:<br>
+http://api.gigapan.org/beta/gigapans/id-w-h.jpg<p>
+
+<pre>
+id is the gigapan id
+w  desired thumbnail width
+h  desired thumbnail height
+</pre>
+
+w and h can be up to 2000, so you can use the API to generate 'large' thumbnails, or preview images.<p>
+
+<h3>Aspect Ratio</h3>
+Multi image panoramas provide many new creative 'knobs.'* One of them is the ability to control our
+image aspect ratio without impacting resolution. (You could always crop an image to any aspect ratio,
+but you lost resolution.<p>
+
+But...with every knob comes complexity and responsibility. In the thumbnail case, if you naively  grab a wxh
+thumbnail without considering the gigapan's aspect ratio  you will get a letterboxed thumbnail. 
+The API will return a wxh image with the desired image content centered with black bars above and below
+your image.
+<p>
+
+To get the properly sized image you need to calculate the the width and height to match the image 
+aspect ratio.<p>
+
+Thumbnails and preview images serve different purposes. You may need an image with specific dimensions, or 
+a specific aspect ratio. Or you may want the largest image which will fit in a given width or height.<p>
+
+What follows are some commands, tricks, and pointers. I am working in the terminal of a Mac, but these tools
+are available for Linux and Windows.<p>
+
+Image Tools<p>
+<ul>
+<li><a href="www.imagemagick.org/">ImageMagick</a> create, edit, compose, or convert bitmap images
+<li><a href="http://fwtools.maptools.org">FWTools</a>: Open Source GIS Binary Kit for Windows and Linux</a>
+<li><a href="http://owl.phy.queensu.ca/~phil/exiftool/">ExifTool</a> "a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files."
+</ul>
+
+
+<h3>Calculate the height or width</h3>
+Assume you want to get the largest non-letterboxed image you can, up to 2000 pixels. <p>
+<ol>
+<li>Get the image width and height<br>
+You can look at the json file of a gigapan at: http://gigapan.com/gigapans/<gigapan id>.json from this
+you can get the height and width. For my sample image they are 72608x18778.
+
+
+<li>
+</ol>
+
+Select the larger value, width, set it to the max size<bR>
+w=2000, then the new height, h, will be:<br>
+h = height * w/width<bR>
+
+It is easier to just show it in code :-)<br>
+<pre>
+import math
+width=72608
+height=18778
+w=2000
+h = height * (float(w)/width)
+h = math.ceil( height * (float(w)/width))
+h
+518.0
+</pre>
+
+Then fetch that image:<br>
+curl -O http://api.gigapan.org/beta/gigapans/33070-2000x518.jpg<br>
+
+<h3>Pan and Scan/Tilt and Scan</h3>
+
+If you need an image with an exact aspect ratio or specific dimensions you will need to crop and 
+resize the image. This is the same idea as adjusting widescreen film images to fit on an old school 4:3 
+television.<p>
+
+
+For an example, I'll download a 2000x2000 preview of <a href="http://api.gigapan.org/beta/gigapans/33070">this
+gigapan</a>:
+
+curl -O http://api.gigapan.org/beta/gigapans/33070-2000x2000.jpg<br>
+(or use wget http://api.gigapan.org/beta/gigapans/33070-2000x2000.jpg)<br>
+
+Next use ImageMagick Mogrify :
+mogrify -extract geometry<br>
+where geometry is widthxheight+-x offset+-y offset<br>
+make a 512x512 image, starting 500 pixel from the left, and 6 pixels from the top.<br>
+mogrify -extract 512x512+500+6 image2.jpg
+
+cp 33070-2000x518.jpg i1.jpg
+cp 33070-2000x518.jpg i2.jpg
+cp 33070-2000x518.jpg i3.jpg
+cp 33070-2000x518.jpg i4.jpg
+mogrify -extract 500x500+0+18 i1.jpg 
+mogrify -extract 500x500+500+18 i2.jpg 
+mogrify -extract 500x500+1000+18 i3.jpg 
+mogrify -extract 500x500+1500+18 i4.jpg 
+
+Grabbing the center:
+mogrify -extract 800x500+600+18 image4.jpg
+
+800 pixel wide
+<hr>
+
+
+The GDAL (Geo Data Abstraction Library) tools also provide useful tools.
+
+This creates a 256x256 pixel image, out of a 500x500 pixel area from the middle of the image.
+gdal_translate  -of jpeg -outsize 256 256 -srcwin 750 18 500 500 33070-2000x518.jpg out2.jpg
+
+-of output format
+-outsize size of the output image
+-srcwin  where to take the image xoffset yoffset width height
+then source image and output image.
+
+nifty:
+gdal2xyz.py 113507.jpg  > out.txt
+
+Creates xyz stream, also means possibility to use gdal in python.
+one line per pixel
+
+
+------------------------------------------------------------------------
+cropping experiements 
+static/img/cropwork.py
+python ./cropwork.py 588-800x800.jpg 
+Last line now gives top margin, test it:
+gdal_translate -of jpeg -srcwin 0 254 800 546 588-800x800.jpg t2.jpg
+and look at that image versus the original.
+It did crop some :-)
+I need not the first non-zero, but the last row with 'lots' of 0. hmmm.
+
+cp 588-800x800.jpg work.jpg:w
+
+
+
+------------------------------------------------------------------------
+crop_work.py dev notes:
+
+Two crops
+1. preserve data but get rid of all the 'obvious' crap-ie. an image surrounded by black
+2. aggressive-only want image data
+
+cropwork_top_partial.py - looks like it generates a #1 top margin.
+
+next: clean up cropwork.py 
+cropwork_preserve_top_bottom.py - does #1 'preserve' cropping for top and bottom margin.
+cropwork.py now generates a gdal_translate command line
+
+next: left/right margins
+
+croptest.sh and croptest2.sh try to run the preserve data crop, then the aggressive crop.
+Currently they fail on testimageout5b.jpg
+
+The other tests look pretty good-not perfect, but pretty good.
+...
+
+For preserve cropping, can I speed things up by not checking every element?
+yes.
+cropwork.py -skip 10  testimage4.jpg
+gdal_translate -of jpeg -srcwin 168 0 463 799 testimage4.jpg out.jpg
+
+Note: thinking about areas of interest, based on contrast differences between blocks area of interest vary...but how to 
+distinguish those from random noise? variation of different block sizes?
+
+------------------------------------------------------------------------
+
+* <a href="https://en.wikipedia.org/wiki/Metamagical_Themas">Metamagical Themas, Douglas Hofstadter</a> 
+"Making variations on a theme is really the crux of creativity." Extrapolation needs creative analogy and that changing context and perspective produces new sets of knobs. "nondeliberate yet nonaccidental slippage," is at the core of creative thought. etc. This blog post is good: <a href="http://regexp.bjoern.org/archives/000215.html">"Knobs, knobs everywhere - just vary a knob to think."</a>

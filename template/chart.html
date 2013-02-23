@@ -1,0 +1,32 @@
+<!-- initial chart -->
+Author: {{stats.author}}<br>
+Gigapan Count: {{stats.gigapan_cnt}}<br>
+Total Pixels: {{stats.total_pixels}} gigapixels<br>
+Largest Image: {{stats.largest_pixels}} gigapixels. Link to <a href="/gigapan/{{stats.largest_id}}">{{ stats.largest_name }}</a><br>
+Average Image Size: {{stats.average_pixels}} gigapixels<br>
+
+<!-- this same basic user menu is duplicated in users.html, todo: integrate the two -->
+{{ stats.first_name }} {{ stats.last_name }} ({{ stats.author }})<a href="/users/{{ stats.gigapan_user_id }}/gigapans">{{ u.gigapan_user_id }} {{ u.username }} {{ u.first_name }} {{ u.last_name }} Gigapans </a>
+| <a href="/users/{{ stats.gigapan_user_id }}/gigapans.kml">KML</a>
+| <a href="/users/{{ stats.gigapan_user_id }}/tags">Tags</a> 
+| <a href="/users/{{ stats.gigapan_user_id }}/stats">Statistics</a> 
+| <a href="/users/{{ stats.gigapan_user_id }}/calendar">Calendar</a> 
+<hr>
+
+<!-- basic gigapan id gap tracking functionality. I got the SLUT to work in 15 minutes! -->
+<script src="/static/css/d3.v2.min.js"></script>
+<meta charset="utf-8">
+
+<h2>GigaPan ID Gap</h2>
+  <div class="pop">pop</div>
+
+    {% include 'chart_gap.html' %}
+
+<h2>Height and Width of Gigapans</h2>
+    {% include 'chart_height_width.html' %}
+
+<h2>Aspect Ratio over time</h2>
+    {% include 'chart_aspect_ratio.html' %}
+
+<h2>Image size over time</h2>
+    {% include 'chart_size.html' %}

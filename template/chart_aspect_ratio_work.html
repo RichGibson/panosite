@@ -1,0 +1,335 @@
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 960px;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+  fill-opacity: .9;
+}
+
+.x.axis path {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+</style>
+<label><input type="checkbox"> Sort values</label>
+<script src="/static/css/d3.v2.min.js"></script>
+
+<style type="text/css">
+
+body {
+  font: 10px sans-serif;
+}
+
+path.dot {
+  fill: white;
+  stroke-width: 1.5px;
+}
+
+rect {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.x line, .y line {
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<script type="text/javascript">
+
+
+var data = [];
+  
+  //min_x = 100000;
+  //max_x = 0;
+  //min_y = 100000;
+  //max_y = 0;
+  
+  min_a=100;
+  max_a=0;
+  
+  cnt = 1;
+  {% for g in gigapans %}
+    w = {{ g.width }};
+    h = {{ g.height }};
+    a = w/h;
+  
+    if (a < min_a) {
+        min_a = a ;       
+    }    
+    
+    if (a > max_a){
+        max_a = a;
+    }    
+    data.push( {x: cnt, y: a, gigapan_id: {{ g.gigapan_id }} } );    
+    cnt = cnt+1;
+  {% endfor %}
+
+
+var width = 1200,
+    height = 150,
+    margin = 20;
+
+var x = d3.scale.linear()
+    .range([0, width])
+    .domain([1, cnt]);
+
+max_a = 10;
+var y = d3.scale.linear()
+    .range([height,0])
+    .domain([min_a, max_a]);
+
+var symbol = d3.scale.ordinal().range(d3.svg.symbolTypes),
+    color = d3.scale.category10();
+
+var vis = d3.select("body")
+  .append("svg")
+    .attr("width", width + margin * 2)
+    .attr("height", height + margin * 2)
+  .append("g")
+    .attr("transform", "translate(" + margin + "," + margin + ")");
+
+var last_img = 1;
+var last_gigapan_id;
+
+function click(d, i) {
+   console.log("click d:", d);
+   console.log("click i: ",i);
+   
+   //document.getElementById("pop").firstChild.data = "<img src=\"/static/img/" + i + ".jpg\">";
+   document.getElementById("pop_id").firstChild.data = d.gigapan_id;
+   //document.getElementById("pop_img").firstChild.src = "/static/img/" + i + ".jpg";
+
+    
+   if (last_img == 1) {
+        document.pop_img01.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 2) {
+        document.pop_img02.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 3) {
+        document.pop_img03.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 4) {
+        document.pop_img04.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 5) {
+        document.pop_img05.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 6) {
+        document.pop_img06.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 7) {
+        document.pop_img07.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 8) {
+        document.pop_img08.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 9) {
+        document.pop_img09.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 10) {
+        document.pop_img10.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+
+   if (last_img == 11) {
+        document.pop_img11.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 12) {
+        document.pop_img12.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 13) {
+        document.pop_img13.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 14) {
+        document.pop_img14.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 15) {
+        document.pop_img15.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 16) {
+        document.pop_img16.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 17) {
+        document.pop_img17.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 18) {
+        document.pop_img18.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 19) {
+        document.pop_img19.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 20) {
+        document.pop_img20.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+
+   last_img++;
+   if (last_img > 20) {
+        last_img = 1
+   }
+   d3.select(this)
+      .attr("fill", "blue")
+      .attr("stroke", "green");
+}
+
+function mouseover(d, i) {
+   document.getElementById("pop_id").firstChild.data = d.gigapan_id;
+   //document.getElementById("pop_list").firstChild.data = document.getElementById("pop_list").firstChild.data + d.gigapan_id;
+   document.pop_img.src="/static/img/" + d.gigapan_id + ".jpg";
+   last_gigapan_id = d.gigapan_id;
+   return;
+   if (last_img == 1) {
+        document.pop_img01.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 2) {
+        document.pop_img02.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 3) {
+        document.pop_img03.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 4) {
+        document.pop_img04.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 5) {
+        document.pop_img05.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 6) {
+        document.pop_img06.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 7) {
+        document.pop_img07.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 8) {
+        document.pop_img08.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 9) {
+        document.pop_img09.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 10) {
+        document.pop_img10.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 11) {
+        document.pop_img11.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 12) {
+        document.pop_img12.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 13) {
+        document.pop_img13.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 14) {
+        document.pop_img14.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 15) {
+        document.pop_img15.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 16) {
+        document.pop_img16.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 17) {
+        document.pop_img17.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 18) {
+        document.pop_img18.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 19) {
+        document.pop_img19.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+   if (last_img == 20) {
+        document.pop_img20.src="/static/img/" + d.gigapan_id + ".jpg";
+   }
+
+
+
+   last_img++;
+   if (last_img > 20) {
+        last_img = 1
+   }
+  console.log("mouseover", d, i);
+  d3.select(this)
+      .attr("fill", "brown")
+      .attr("stroke", "grey");
+}
+
+function mouseout(d, i) {
+  d3.select(this)
+      .attr("fill", "orange");
+}
+
+var xrule = vis.selectAll("g.x")
+    .data(x.ticks(10))
+  .enter().append("g")
+    .attr("class", "x");
+
+xrule.append("line")
+    .attr("x1", x)
+    .attr("x2", x)
+    .attr("y1", 0)
+    .attr("y2", height);
+
+xrule.append("text")
+    .attr("x", x)
+    .attr("y", height + 3)
+    .attr("dy", ".71em")
+    .attr("text-anchor", "middle")
+    .text(x.tickFormat(10));
+
+var yrule = vis.selectAll("g.y")
+    .data(y.ticks(10))
+  .enter().append("g")
+    .attr("class", "y");
+
+yrule.append("line")
+    .attr("x1", 0)
+    .attr("x2", width)
+    .attr("y1", y)
+    .attr("y2", y);
+
+yrule.append("text")
+    .attr("x", -3)
+    .attr("y", y)
+    .attr("dy", ".35em")
+    .attr("text-anchor", "end")
+    .text(y.tickFormat(10));
+
+vis.append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+vis.selectAll("path.dot")
+    .data(data)
+  .enter().append("path")
+    .attr("class", "dot")
+    .attr("stroke", function(d, i) { return color(i); })
+    .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; })
+    .attr("d", d3.svg.symbol()
+    .type(function(d, i) { return symbol(i); }))
+    .on("click", click)
+    .on("mouseover", mouseover)
+    .on("mouseout", mouseout);
+
+    </script>

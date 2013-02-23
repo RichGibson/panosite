@@ -1,0 +1,24 @@
+<h2>Where is my stuff?</h2>
+
+Michael's shop. What are the elements?<p>
+<ol>
+<li>Image capture
+<li>Processing
+<li>Training and meta data capture
+<li>Search/Browse modes.
+</ol>
+
+Simplest useful thing...<br>
+<pre>
+Blue metal Akro Mills Drawers-4'x4' roughly, drawers, could QR code them-parts and stuff
+
+Storelite bins, on shelves, not always labeled, translucent
+Shoebox size boxes, etc. on shelves.
+
+</pre>
+
+
+First order: capture images...<br>
+
+snapshots are likely key.
+snapshots need tagging.

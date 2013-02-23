@@ -1,0 +1,14 @@
+Histograms...
+
+Eyegore provides processing of image into foreground and background 
+
+But for now, check out imagemagick histograms
+
+
+extract histogram data:
+convert 39149.jpg -define histogram:unique=colors=true -format %c histogram:info:foo.gif
+
+
+extract histogram as file:
+
+

@@ -1,0 +1,120 @@
+Tue Oct 23 09:43:22 PDT 2012 - Dealing with galleries
+
+<h1>Galleries</h1>
+<h2>Loading Galleries</h2>
+Command line tools are in root directory and /tools/gallery_work <br>
+
+<h3>Fetch list of all galleries</h2>
+
+This seems to work
+<pre>
+(in tools/gallery_work)
+python ./load_galleries.py > gallery_list.sh
+
+sh ./gallery_list.sh 
+grep -h  '<a href="/galleries/' galleries_*.html | grep -v landing_page | grep -v "<div" | sort > list.txt 
+
+
+(in top /)
+python ./load_gallery.py tools/gallery_work/list.txt 
+</pre>
+
+Now the Gallery model is loaded with those galleries.
+
+<hr>
+<h3>Parsing the galleries_nn.html files</h3>
+
+Each gallery is wrapped in a &lg;div class="section-gigapan-view"&gt;<br>
+
+<hr>
+For my system make this work: http://gigapan.com/galleries.json<p>
+For now, need to fetch and parse the individual pages - about 18 pages of galleries right now.<p>
+
+
+Crap: it appears that the same link in the browser produces 60 items, when called with curl I get 10
+gigapans at a time.
+
+
+
+<h2>Notes on how things 'should' be</h2>
+
+This returns the first page of gigapans in a gallery:
+curl -O http://gigapan.com/galleries/9873/gigapans
+
+This gets json for one gigapan
+http://gigapan.com/galleries/9873/gigapans/116717.json
+
+So does this
+http://gigapan.com/gigapans/116717.json
+
+
+Based on that logic, this seems like it should work:
+http://gigapan.com/galleries/9873.json
+or 
+http://gigapan.com/galleries/9873/gigapans.json
+
+...
+page access
+
+http://gigapan.com/gigapans?gallery_id=9873&amp;order=most_popular&amp;page=2&amp;per_page=10
+
+this works - probably up to per_page 60 works, based on my prior experience with gigapan pages.
+http://gigapan.com/gigapans?gallery_id=9873&amp;order=most_popular&amp;page=1&amp;per_page=20
+...
+
+Parse this mess?
+curl -O http://gigapan.com/galleries/9873/gigapans
+
+'easy' method...
+just use curl, grab as many on a page as possible, and then grep for 
+
+/galleries/9873/gigapans/116717 
+or even
+
+ grep '<div class="gigapan_thumbnail"><a href="/galleries/'
+
+Grab until there are no gigapans on the page.
+
+-----
+A list of galleries
+http://gigapan.com/galleries?page=1&user_id=rschott
+
+List of galleries
+http://gigapan.com/galleries?page=1&user_id=rschott&per_page=60
+
+Per page=60 claims to work but I don't seem to have all of this gigapans
+
+This returns extras, but dedupe them later
+grep '<a href="/galleries/' ron_*.html
+
+ron_galleries.sh fetches galleries.
+
+
+Better parsing:
+ grep  '<a href="/galleries/' ron_*.html | grep -v landing_page | grep -v "<div" | sort > list.txt 
+
+Discovered: curl urls need to be in quotes to escape shell escaping :-/
+and then per_page works fine.
+------------------------------------------------------------------------
+
+The process:
+
+For now, need to fetch and parse the individual pages - about 18 pages of galleries right now.
+curl -o ron_2.html  "http://gigapan.com/galleries?page=2&user_id=rschott&per_page=60"
+grep -h '<a href="/galleries/' ron_*.html | grep -v landing_page | grep -v "<div" | sort > list.txt 
+
+This loads the gallery table.
+ python ./load_gallery.py gallery_work/list.txt 
+
+Now fetch json's for images in galleries?
+
+-walk gallery pages
+gallery_pages.sh fetches two pages of ron's yellowstone gallery
+
+grep -h '<a href="/galleries/\d+/gigapans/\d+">
+
+now
+
+python ./get_gallery_gigapans.py gallery_work/gallery_7748_1.html  > t
+python ./get_gallery_gigapans.py gallery_work/gallery_7748_2.html  >>  t
+
