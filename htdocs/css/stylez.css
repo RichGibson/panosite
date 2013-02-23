@@ -147,8 +147,9 @@
 }
 .year {
     float: left;
-    border: 2px solid;
-    background-color: grey;
+    border: 0.5px solid;
+    background-color: white;
+    padding-bottom: 0.5em;
 }
 .big {
     width: 1000px;
@@ -342,16 +343,15 @@ overflow:auto;
     h3 a{
     text-decoration: none;
     }
-    
     .calendar_year {
-        background-color: grey;
+        background-color: lightgrey;
     }
     h4 {
     font-size: 1.0em;
     font-family:Arial;
     font-style: oblique;
     color: #FFF;
-    background-color: #555;
+    background-color: #101010;
     margin-bottom: 5px;
     }
     h4 a{
