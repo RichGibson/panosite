@@ -136,8 +136,10 @@ def calendar_user(request, user_id):
         dict(zip([col[0] for col in desc], row))
         for row in cursor.fetchall()
     ]
-    
+    # TODO: somehow calendar broke. damn.
+    print "counts", counts 
     for m in counts:
+        print "m %r" % m['cnt']
         if (int(m['year']) >= start_year):
             index = (int(m['year']) - start_year) * 12 + int(m['month'])
             list[index]['cnt'] = m['cnt'] 

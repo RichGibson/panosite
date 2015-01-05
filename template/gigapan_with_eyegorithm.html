@@ -5,14 +5,9 @@
 todo: options for how many per column/row/page and image sizes
 {% if gigapan %}
     <h2>{{ gigapan.name }}</h2>
-        <a href="http://gigapan.com/gigapans/{{ gigapan.gigapan_id }}" target="top">
-           View "{{ gigapan.name }} on Gigapan.com </a>
-        </a>  
-        <hr>
     <div>        
         <a href="http://gigapan.com/gigapans/{{ gigapan.gigapan_id }}" target="top">
-           <img src="/img/small/{{ gigapan.gigapan_id}}.jpg">View on Gigapan.com<br>/img/{{ gigapan.gigapan_id}}.jpg<br>
-           <!-- <img src="/img//{{ gigapan.gigapan_id}}.jpg">View on Gigapan.com<br>/img/{{ gigapan.gigapan_id}}.jpg<br> -->
+           <img src="/img/{{ gigapan.gigapan_id}}.jpg"><br>//img/{{ gigapan.gigapan_id}}.jpg<br>
         </a>  
 
         <iframe src="http://www.gigapan.com/mobile/iOS/1.0/?id={{ gigapan.gigapan_id }}" width="800" height="600"></iframe>
@@ -72,6 +67,23 @@ Code to Embed that view<br>
     </div>
 
 
+    <div>
+        <hr>
+        <h2>Eyegorithm results</h2>
+        <ul>    
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_layer1.png">layer1.png
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_layer2.png">layer2.png
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_maskchromatic.png" width="600">maskchromatic
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_maskmap.png">maskmap
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_maskmapold.png">maskmapold
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_masknumbers.png">masknumbers
+        <li><img src="/eye/{{ gigapan.gigapan_id }}_maskoriginal.png">maskoriginal
+        </ul>
+        id_layer1.txt
+        id_layer2.txt
+        id.json
+    </div>
+    
 {% else %}
     <p>No gigapan found meet filters, or none exist. .</p>
 {% endif %}
