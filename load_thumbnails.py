@@ -22,12 +22,14 @@ username="rich"
 width  = 800
 height = 800
 
-gigapans = Gigapan.objects.all() #.filter(gigapan_id=38713)
+gigapans = Gigapan.objects.all().order_by('-gigapan_id')
+#gigapans = Gigapan.objects.all() #.filter(gigapan_id=38713)
 cnt = 0
 for g in gigapans:
     filename = "%i-%ix%i.jpg" % (g.gigapan_id,width,height)
     url = "http://api.gigapan.org/beta/gigapans/%s" % (filename)
-    out_file = "static/img/%s" % filename
+    out_file = "htdocs/img/%s" % filename
+    #out_file = "static/img/%s" % filename
     
     print "%i: (%i, %i)" % (g.gigapan_id, g.width, g.height)
     # check if filename exists
@@ -65,7 +67,8 @@ for g in gigapans:
 
     filename2 = "%i-%ix%i.jpg" % (g.gigapan_id,w,h)
     url2 = "http://api.gigapan.org/beta/gigapans/%s" % (filename2)
-    out_file2 = "static/img/%s.jpg" % (g.gigapan_id) 
+    out_file2 = "htdocs/img/%s.jpg" % (g.gigapan_id) 
+    #out_file2 = "static/img/%s.jpg" % (g.gigapan_id) 
     print "filename2: ", filename2
     print "out_file2: ", out_file2
     print url2

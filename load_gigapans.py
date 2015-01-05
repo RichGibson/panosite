@@ -12,8 +12,8 @@ BASE_URL = 'http://api.gigapan.org/beta'
 items = 2000
 page=1
 per_page=60
-username="rschott"
-#username="rich"
+#username="rschott"
+username="rich"
 
 def load_gigapans(url):
     #jsondata=json.load(open('gigapan/my_gigapans.json'))

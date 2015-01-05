@@ -115,7 +115,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/richgibson/panosite/template"
+    "/home/richgibson/panosite/template",
+    "/home/richgibson/panosite/mc/template"
 
 
 )
@@ -135,6 +136,7 @@ INSTALLED_APPS = (
      'django_extensions',
      'gigapan',
     'taggit',
+    'mc',
     #'taggit_templatetags',
 )
 # taggit_templatetags doesn't install, some version conflict

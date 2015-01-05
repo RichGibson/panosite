@@ -4,8 +4,14 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
+    # 
+    url(r'^mc', 'mc.views.index'),
+    url(r'^mc/docs/(.+)', 'mc.views.docs'),
+
+
+    #panosite stuff
     url(r'^$', 'gigapan.views.home', name='home'),
+
     # url(r'^panosite/', include('panosite.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
