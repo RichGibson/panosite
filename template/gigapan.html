@@ -11,7 +11,8 @@ todo: options for how many per column/row/page and image sizes
         <hr>
     <div>        
         <a href="http://gigapan.com/gigapans/{{ gigapan.gigapan_id }}" target="top">
-           <img src="/img/small/{{ gigapan.gigapan_id}}.jpg">View on Gigapan.com<br>/img/{{ gigapan.gigapan_id}}.jpg<br>
+           <img src="/img/{{ gigapan.gigapan_id}}.jpg">View on Gigapan.com<br>/img/{{ gigapan.gigapan_id}}.jpg<br>
+            <!-- img/small exists, but is not reliably loaded? -->
            <!-- <img src="/img//{{ gigapan.gigapan_id}}.jpg">View on Gigapan.com<br>/img/{{ gigapan.gigapan_id}}.jpg<br> -->
         </a>  
 
@@ -34,7 +35,7 @@ Code to Embed that view<br>
           <td valign="top" width="30%">
             <a href="http://gigapan.com/gigapans/{{ gigapan.gigapan_id }}" target="top">view on gigapan.org</a>
             <a href="http://www.3d-360.com/{{ gigapan.gigapan_id }}" target="top">3d-360 view</a>
-          
+
             {{ gigapan.name }}<br>
             {{ gigapan.tagstring  }} <br>
             {% for tag in gigapan.tags.all %}
@@ -50,19 +51,8 @@ Code to Embed that view<br>
             {% endif %}
             <hr>
     
-            <div class="hideable">
-              <form id="edit_form"  action="/gigapan/{{ gigapan.id }}" method="post"> <!--{ % csrf_token % } -->
-              {% for field in form %}
-                  <div class="fieldWrapper">
-                      {{ field.errors }}
-                      {{ field.label_tag }}: {{ field }}
-                  </div>
-               {% endfor %}
-               <p><input type="submit" value="Save changes" /></p>
-            </div>
-            <p><input type="submit" value="show edit form" onClick="alert('fuck');document.getElementById('edit_form').opacity=.8;return()" /></p>
             <ul>
-                <li><a href="/gigapans/gfat/{{ gigapan.id }}">GigaPan Feature Annotation Tool - GFAT </a>
+                <!-- <li><a href="/gigapans/gfat/{{ gigapan.id }}">GigaPan Feature Annotation Tool - GFAT </a> -->
                 <li><a href="http://gigapan.com/gigapans/{{ gigapan.gigapan_id }}" target="top">view on gigapan.org</a> &nbsp; 
                 <li><a href="http://www.3d-360.com/{{ gigapan.gigapan_id }}" target="top">view on 3d-360.com</a>
             </ul>
