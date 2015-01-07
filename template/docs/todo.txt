@@ -11,7 +11,10 @@ after the move?
 -fix the next thing
 -repeat
 
+-fixed! start-1: gigapans.html: not showing the first gigapan? Works for single user, but not
+for 'all' also nav is ignorning if this is a user filter?:w
 
+-fixed: the end date needs to be set from the data...now it is hard coded.broken calendar
 ....
 -create some 'overall' histogram view.
 

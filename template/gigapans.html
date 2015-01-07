@@ -1,5 +1,10 @@
+<!--
 look at tumblr /archive for a nice format. 
+-->
+{% if tag_list %}
 tag_list {{ tag_list }}<br>
+{% endif %}
+
 {% if p %}
   Showing images tagged: <b>{{ p }}</b> 
       {% if foobar %}
@@ -29,12 +34,12 @@ tag_list {{ tag_list }}<br>
     <div class="nav_local">
         {{header}} {{ nav.start }} to {{ nav.end }} of {{ nav.gigapan_cnt }} 
         <a href="/gigapans/{{ nav.prev }}">Perv</a> | (page {{ nav.page }}/{{ nav.page_cnt}} ) | <a href="{{ nav.next_link }}">Next</a><br>
-        download kml
+        <!-- download kml -->
     
     </div>
     
     <div class="gigapans">
-    error: issues showing the first gigapan? wtf, and nav is ignoring if this is a user filter...
+    <!-- TODO: issues showing the first gigapan? wtf, and nav is ignoring if this is a user filter... -->
         <hr>
         {% for g in gigapans %}
                 <a href="/gigapan/{{ g.id }}"  class="Xhoverbaby" >

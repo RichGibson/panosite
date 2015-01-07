@@ -89,12 +89,11 @@ def calendar(request):
     return calendar_user(request, 0)
     
 def calendar_user(request, user_id):
-    
     list = []
     months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-    
+
     start_year = 2007
-    end_year = 2014
+    end_year = 2016
     for year in range(start_year, end_year):
         for month in range(1,13):
             m={}
@@ -128,21 +127,25 @@ def calendar_user(request, user_id):
     sql = sql + user_clause + """                 
             group by d order by cnt
             """ #% (user_clause)
-    print "excecute this sql: %s" % sql
+    #print "excecute this sql: %s" % sql
     cursor.execute(sql, [])
-    print "after execute"
+    #print "after execute"
 
     desc = cursor.description
     counts = [
         dict(zip([col[0] for col in desc], row))
         for row in cursor.fetchall()
     ]
-    # TODO: somehow calendar broke. damn.
-    print "counts", counts 
+    # TODO: the end_year constant has to be set or things break.
     for m in counts:
-        print "m %r" % m['cnt']
+        #print "m %r" % m['cnt']
+        #print "year %r" % m['year']
+        #print "month %r" % m['month']
+        #print "start year %r" % start_year
+        #print "end year %r" % end_year
         if (int(m['year']) >= start_year):
             index = (int(m['year']) - start_year) * 12 + int(m['month'])
+            #print "index", index
             list[index]['cnt'] = m['cnt'] 
             list[index]['gigapan_id'] = m['gigapan_id_min']
             list[index]['gigapan_id_max'] = m['gigapan_id_max']
@@ -326,7 +329,8 @@ def gigapans_parent(request, page, user_id, format):
         #gigapans = Gigapan.objects.all().order_by('aspect')
 
         gigapan_cnt = len(gigapans)
-        gigapans = gigapans[start:end]
+        #print "gigapan_cnt", gigapan_cnt
+        gigapans = gigapans[start-1:end]
         header = 'Sorted by gigapan id descending for all users'
         
     st = ''
@@ -390,6 +394,8 @@ def gigapans_parent(request, page, user_id, format):
         return render_to_response('gigapans.kml', {'nav':nav,'lookAt':lookAt,'start':start,'end':end, 'gigapans': gigapans,'page':page, 'prev':page-1, 'next':page+1, 'header':header })        
     else:    
         return render_to_response('site_master.html', {'nav':nav,'lookAt':lookAt,'start':start,'end':end, 'gigapans': gigapans,'page':page, 'prev':page-1, 'next':page+1, 'page_template': 'gigapans.html', 'header':header, 'sidebar_template':'empty_sidebar.html' })
+
+
 
 def gigapans_user(request, user_id):
     return gigapans_parent(request, 1, user_id,'')
