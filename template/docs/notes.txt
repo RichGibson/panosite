@@ -19,6 +19,12 @@ Fetch my most recent 1000 of my gigapans
  curl -o my_gigapans.json http://api.gigapan.org/beta/gigapans/page/1/per_page/1000/username/rich/most_recent.json?callback=process_json
  curl -o my_gigapans_2.json http://api.gigapan.org/beta/gigapans/page/2/per_page/1000/username/rich/most_recent.json?callback=process_json
 
+then
+python ./load_gigapans.py my_gigapans.json
+python ./load_gigapans.py my_gigapans_2.json
+
+python ./load_thumbnails.py
+
 
 Installation:
 pip install django-taggit

@@ -9,7 +9,7 @@
 { % endfor %}
 -->
 <h2>&nbsp;<br>Tag Cloud&nbsp;<br>&nbsp;</h2>
-multiple tags: like 'monochrom and vienna'
+<!-- multiple tags: like 'monochrom and vienna' -->
 
 {% if tag_dict %}
 using tag_dict
@@ -21,7 +21,9 @@ using tag_dict
 
 {% endif %}
 
+<hr>
 {% if tags %}
+
 using 'tags'
     {% for tag in tags %}
         {% if tag.font_size > 6 %}
@@ -29,19 +31,16 @@ using 'tags'
         {% endif %}
     {% endfor %}
 
-<!--
+
     <ol class="niceList">
         {% for tag in tags %}
             <li><a href="/gigapans/bytag/{{ tag.name }}">{{ tag.name }}</a> ({{ tag.num_times }} cnt)
             {% if  tag.latitude %}
                 ({{ tag.latitude }}, {{ tag.longitude }})
-            {% else %}
-                No georeference 
             {% endif %}
             </li>
         {% endfor %}
     </ol>
--->    
 {% endif %}
 
 

@@ -1,6 +1,18 @@
+<hr>
 Things to do or think about...
 
+-Lots is just broken for no obvious reason-maybe it was never actually working
+after the move?
 
+-fixed! fix docs
+--fixed! the list of files in the sidebar is wrong.
+
+-fixed! wtf happened to my sidebar? screen needs to be wide enough...fixed.
+-fix the next thing
+-repeat
+
+
+....
 -create some 'overall' histogram view.
 
 

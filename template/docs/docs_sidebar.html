@@ -1,7 +1,16 @@
 <!-- docs sidebar template -->
 Other docs/Notes
+<br>
 <ul>
-	{% for doc in docs %}
-  		<li><a href="/docs/{{ doc }}">{{ doc }}</a>
+	{% for dir in docs %}
+        <li><b>files in {{dir.0}} </b>
+            <ul>
+                {% for doc in dir.1 %}
+                    <li>- <a href="/docs/{{doc}}">{{doc}}<br>
+                {% endfor %}
+            </ul>
 	{% endfor %}
 </ul>
+<hr>
+
+(file: docs/docs_sidebar.html)

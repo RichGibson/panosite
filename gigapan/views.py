@@ -1,5 +1,6 @@
 # Create your views here.
 
+from django.conf import settings
 from django.template import RequestContext, loader
 from django.shortcuts import render_to_response
 from django.shortcuts import render
@@ -151,14 +152,31 @@ def calendar_user(request, user_id):
     return render_to_response('site_master.html', { 'page_template':'calendar.html', 'list': list,})
 
 def docs(request, page):        
-    docs = os.listdir('template/docs')        
+    """ My convention is to have a templtes/docs directory. Any files
+        dropped into templates/docs magically appear here. Use 
+        settings.TEMPLATE_DIRS to decide where to look for docs/ 
+
+        It assumes:
+        import os
+        from django.conf import settings
+
+        docs.html - a template :-)
+ 
+    """
+
+    docs = [ [d, os.listdir("%s/docs" % d) ] for d in settings.TEMPLATE_DIRS]
+    for d in docs:
+        d[1].sort()
+
+    # if we have a passed in template page, use it, otherwise default to docs.html
     if len(page) == 0:
         page="docs.html"
-    
+
     # todo: check that the page exists in the docs list    
     #if  page.rfind('.html') == -1:
     #    page = "%s.html" % page    
 
+    # use the pre tag for txt files
     if re.search(page,'txt'):
         pre=1
     
@@ -661,6 +679,14 @@ def tags_parent(request, user_id, page):
             group by tag_id 
             order by taggit_tag.name """ % (user_id)
 
+        sql = """select tag_id,taggit_tag.name, count(tag_id) as num_times , 0 as font_size
+            from taggit_taggeditem, taggit_tag , gigapan_gigapan
+            where taggit_taggeditem.tag_id=taggit_tag.id 
+            and taggit_taggeditem.object_id = gigapan_gigapan.id
+            and gigapan_gigapan.owner_id = %s 
+            group by tag_id 
+            order by count(tag_id) desc """ % (user_id)
+
 
         cursor.execute(sql, [])
         desc = cursor.description
@@ -687,7 +713,7 @@ def tags_parent(request, user_id, page):
 
     else:
         print "tags_parent no user_id, before call to tags.most_common().order_by"
-        tags = Gigapan.tags.most_common().order_by("name")
+        tags = Gigapan.tags.most_common().order_by("-num_times")
         print "tags_parent no user_id, after call to tags.most_common().order_by"
     
         # scale font-size from 7-100?
