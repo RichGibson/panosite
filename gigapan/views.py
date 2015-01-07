@@ -18,6 +18,9 @@ import os
 import re
 import math
 
+THUMBNAIL_w = 250
+THUMBNAIL_h = 250
+
 def bytag(request, p):
     # make an array of tags, split on space or comma
     #multiple spaces are one space.
@@ -41,12 +44,10 @@ def bytag(request, p):
     #tags = Gigapan.tags.Filter(tags__name__in=tag_list)
 
     st = ''
-    w = 250
-    h = 250
     for g in gigapans:
       # the gigapan.org thumbnail api takes a gigapan id, width, and height and returns 
       # a 'thumbnail' of the image in that size.
-      #g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,w,h) 
+      #g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,THUMBNAIL_w,THUMBNAIL_h) 
       g.thumbnail_filename = "%i-800x800.jpg" % (g.gigapan_id) 
 
     form = TagAddForm()
@@ -73,12 +74,10 @@ def bytag_edit(request, p):
     gigapans=Gigapan.objects.filter(tags__name__in=tags)
 
     st = ''
-    w = 250
-    h = 250
     for g in gigapans:
       # the gigapan.org thumbnail api takes a gigapan id, width, and height and returns 
       # a 'thumbnail' of the image in that size.
-      g.thumbnail_filename = "img/%i-%ix%i.jpg" % (g.gigapan_id,w,h) 
+      g.thumbnail_filename = "img/%i-%ix%i.jpg" % (g.gigapan_id,THUMBNAIL_w,THUMBNAIL_h) 
 
     return render(request, 'index.html', {
         'form': form, 'p':p, 'tme':'foobar'
@@ -233,8 +232,6 @@ def gallery(request, id):
     gallery = Gallery.objects.get(id=id)
     #gigapans = Gigapan.objects.get(galleries=id) 
     st = ''
-    w = 250
-    h = 250
     start=-1
     end=-1
     page=-1
@@ -255,8 +252,13 @@ def get_location(g):
 
 def gfat(request,id):
     # gigapan feature annotation tool
-    gigapan = Gigapan.objects.get(id=id)
-    
+    try:
+        gigapan = Gigapan.objects.get(id=id)
+    except:
+        gigapan = ""
+        form = ""
+        return render_to_response('site_master.html', {'gigapan': gigapan, 'edit':True, 'page_template': 'gfat.html', 'form': form})
+
     if request.method == 'POST':
         form = GigapanEditForm(request.POST, instance=gigapan)
         if form.is_valid():
@@ -417,33 +419,27 @@ def index(request,page):
 def index_nopage(request):
     return gigapans(request,1,0)
 
+# TODO: map and mapkml do the same thing, just return a different format. Add a format parameter?
 def map(request, p):
+    """ return gigapan location to support mapping """
     gigapans = Gigapan.objects.all().order_by('updated')
-    #gigapans=Gigapan.objects.filter(latitude != 0)
-    st = ''
-    w = 250
-    h = 250
     for g in gigapans:
       # figure out a location for this gigapan
       (lat,lng,radius) = get_location(g)
       g.thumbnail_url = "/img/%i-800x800.jpg" % (g.gigapan_id) 
-      #g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,w,h) 
+      g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,THUMBNAIL_w,THUMBNAIL_h) 
 
     return render_to_response('map.html', {'gigapans': gigapans, 'p': p})
 
-
-
 def mapkml(request, p):
+    """ return a kml limited (in theory) to gigapans with georeferencing """
     gigapans = Gigapan.objects.all().order_by('updated')
-    #gigapans=Gigapan.objects.filter(latitude != 0)
     st = ''
-    w = 250
-    h = 250
     for g in gigapans:
       # figure out a location for this gigapan
       (lat,lng,radius) = get_location(g)
       g.thumbnail_url = "/img/%i-800x800.jpg" % (g.gigapan_id) 
-      #g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,w,h) 
+      #g.thumbnail_url = "http://api.gigapan.org/beta/gigapans/%i-%ix%i.jpg" % (g.gigapan_id,THUMBNAIL_w,THUMBNAIL_h) 
 
     return render_to_response('map.kml', {'gigapans': gigapans, 'p': p})
 
@@ -773,7 +769,7 @@ def thumbnail(request,gigapan_id,width,height):
     return render_to_response('thumbnail.html', {'filename': filename, 'url': url})
 
 def users(request):
-    # initialize user table
+    # To initialize user table
     # insert into gigapan_user values (2,1252,1252,'rschott','Ron','Schott');
     # insert into gigapan_user values (1,353,353,'rich','Rich','Gibson');
 

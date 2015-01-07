@@ -15,7 +15,7 @@ Gigapans with location
     {% for g in gigapans %}
         {% if g.latitude != None %}
             <li><a href="/gigapan/{{ g.id }}/">
-               {{ g.name }}
+               {{ g.name }} 
                ({{ g.latitude }},{{ g.longitude }}) <!-- error circle: {{ g.radius }} -->
             </a>
         {% endif %}

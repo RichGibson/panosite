@@ -127,10 +127,12 @@
 
 .nav_local {
     float: left;
+    padding-bottom: 20px;
 }
 .gigapans {
     float: left;
     background-color: black;
+    padding-bottom: 20px;
 }
 
 .codeblock {
@@ -359,6 +361,7 @@ overflow:auto;
     }
     .text_list {
         display:block;
+        padding:40px;
     }
     p {
         font-family: georgia,verdana,arial,sans-serif;

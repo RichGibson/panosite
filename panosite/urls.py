@@ -33,8 +33,10 @@ urlpatterns = patterns('',
     url(r'gigapans/calendar','gigapan.views.calendar'),
     url(r'users/(.+)/calendar','gigapan.views.calendar_user'),
     
-    url(r'^gigapans/map/(.*)$','gigapan.views.map'),
+    url(r'^gigapans/mapkml(.)?$','gigapan.views.mapkml'),
     url(r'^gigapans/mapkml/(.*)$','gigapan.views.mapkml'),
+    url(r'^gigapans/map/(.*)$','gigapan.views.map'),
+    url(r'^gigapans/map(.)','gigapan.views.map'),
 
     url(r'^gigapans/tags','gigapan.views.tags'),
     url(r'^gigapans/tag_view','gigapan.views.tag_view'),
@@ -59,6 +61,7 @@ urlpatterns = patterns('',
 
 
     url(r'^gigapans/gfat/(\d+)','gigapan.views.gfat'),
+    url(r'^gigapans/gfat(.)?','gigapan.views.gfat'),
 
 	# catch all /gigapans link
     url(r'^gigapans','gigapan.views.index_nopage'),

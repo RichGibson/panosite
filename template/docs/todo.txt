@@ -11,6 +11,8 @@ after the move?
 -fix the next thing
 -repeat
 
+-mapkml not being called?
+
 -fixed! start-1: gigapans.html: not showing the first gigapan? Works for single user, but not
 for 'all' also nav is ignorning if this is a user filter?:w
 
