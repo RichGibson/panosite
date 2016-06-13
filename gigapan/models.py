@@ -90,7 +90,8 @@ class Gigapan(models.Model):
 	field_of_view_w  = models.FloatField(blank=True, null=True)
 	field_of_view_h  = models.FloatField(blank=True, null=True)
 	field_of_view_b  = models.FloatField(blank=True, null=True)
-	tags = TaggableManager()
+    # something in Tags is not backwards compatible with the new 
+	#tags = TaggableManager()
 	galleries	= models.ManyToManyField(Gallery)
 
 	# TODO: add update_from_json(slef, gigapan_data)

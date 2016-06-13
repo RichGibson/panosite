@@ -23,7 +23,10 @@
                 {% endif %}
             -->
             {% if m.gigapan_id %}
+                foobar /gigapan/{{g.id}}
+                <a href="/gigapan/{{g.id}}">
                 <img src="/img/{{m.gigapan_id}}-800x800.jpg" width="100%" height="100%">
+                </a>
             {% else %}
                 <img src="/img/0-800x800.png" width="100%" height="100%">
             {% endif %}

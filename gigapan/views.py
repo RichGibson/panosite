@@ -191,22 +191,23 @@ def gigapan(request,id):
     #gigapan.tagstring = gigapan.tags
     
     if request.method == 'POST':
-        form = GigapanEditForm(request.POST, instance=gigapan)
-        if form.is_valid():
-            # process data in  form.cleaned_data
-            form.save()
-        else:
-            foo = 'foobar'
+       form = GigapanEditForm(request.POST, instance=gigapan)
+       if form.is_valid():
+           # process data in  form.cleaned_data
+           form.save()
+       else:
+           foo = 'foobar'
     else:
-        # not a form submission, so populate the form with the current gigapan data
-        form = GigapanEditForm(instance=gigapan)
-    
+       # not a form submission, so populate the form with the current gigapan data
+       form = GigapanEditForm(instance=gigapan)
+   
     return render_to_response('site_master.html', {'gigapan': gigapan, 'edit':True, 'page_template': 'gigapan.html', 'form': form})
 
 
 class GigapanEditForm(forms.ModelForm):
-    class Meta:
-        model = Gigapan
+    pass
+    #class Meta:
+    #    model = Gigapan
 
       
 
@@ -292,8 +293,10 @@ def gigapan(request,id):
             foo = 'foobar'
     else:
         # not a form submission, so populate the form with the current gigapan data
-        form = GigapanEditForm(instance=gigapan)
+        #form = GigapanEditForm(instance=gigapan)
+        pass
     
+    return render_to_response('site_master.html', {'gigapan': gigapan, 'edit':True, 'page_template': 'gigapan.html'})
     return render_to_response('site_master.html', {'gigapan': gigapan, 'edit':True, 'page_template': 'gigapan.html', 'form': form})
 
 def gigapans(request, page, user_id):
